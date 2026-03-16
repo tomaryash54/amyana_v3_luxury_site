@@ -69,6 +69,18 @@ h4{color:#6e5c4b;margin-top:20px;}
 .sound-page{background:url('/images/reiki-bg.jpg.png') center/cover fixed;background-color:#faf8f5;position:relative;}
 .sound-page > *{position:relative;z-index:1;}
 .sound-page::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(250,248,245,0.85);z-index:0;}
+.meet-healer{background:#faf8f5;padding:60px 20px;margin-top:40px;}
+.meet-healer-content{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+.meet-healer-text h2{font-family:'Playfair Display',serif;font-size:42px;color:#2c2c2c;margin-bottom:20px;}
+.meet-healer-text p{color:#555;line-height:1.8;font-size:16px;margin-bottom:15px;}
+.healer-buttons{display:flex;gap:15px;margin-top:30px;flex-wrap:wrap;}
+.btn-primary,.btn-secondary{padding:14px 28px;border:none;border-radius:6px;font-weight:500;cursor:pointer;transition:all 0.3s;}
+.btn-primary{background:#6e5c4b;color:white;}
+.btn-primary:hover{background:#5a4a3a;transform:translateY(-2px);box-shadow:0 4px 12px rgba(110,92,75,0.3);}
+.btn-secondary{background:transparent;border:2px solid #6e5c4b;color:#6e5c4b;}
+.btn-secondary:hover{background:#6e5c4b;color:white;}
+.meet-healer-image img{width:100%;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,0.15);}
+@media(max-width:768px){.meet-healer-content{grid-template-columns:1fr;gap:30px;}.meet-healer-text h2{font-size:32px;}.healer-buttons{flex-direction:column;}.btn-primary,.btn-secondary{width:100%;}}
 </style>
 </head>
 <body>

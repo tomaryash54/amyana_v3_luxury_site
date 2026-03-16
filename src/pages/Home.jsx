@@ -60,6 +60,31 @@ return(
 
 </div>
 </div>
+
+<section className="meet-healer">
+<div className="meet-healer-content">
+<div className="meet-healer-text">
+<h2>Meet the Healer</h2>
+<p>Amy is a Sound and Reiki Healer whose practice is rooted in the foundations of yoga and meditation. Based in Delhi NCR, she offers private and group sessions designed to create spaces of calm where the body can soften and the nervous system can return to balance.</p>
+
+<p>Her work centers on stillness. Through sound, breath, and subtle energy practices, she guides individuals toward a regulated state where clarity and ease naturally unfold. Deeply connected to nature, Amy works intuitively with her instruments, allowing their resonance to echo the rhythms of the natural world.</p>
+
+<p>She believes wellness is not a luxury or an occasional ritual, but an essential part of living well. Just as we care for our physical health, the nervous system deserves the same awareness and attention.</p>
+
+<p>Through AMYANA, she invites others to pause, listen, and return to their natural rhythm.</p>
+
+<div className="healer-buttons">
+<button className="btn-primary">KNOW OUR STORY</button>
+<button className="btn-secondary">BOOK A CONSULTATION</button>
+</div>
+</div>
+
+<div className="meet-healer-image">
+<img src="/images/healer.jpg" alt="Amy - Sound and Reiki Healer"/>
+</div>
+</div>
+</section>
+
 </>
 )
 }
