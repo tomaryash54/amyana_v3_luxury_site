@@ -40,13 +40,15 @@ a{text-decoration:none;color:inherit;}
  background:white;
 }
 footer{background:#ede7de;padding:40px;text-align:center;margin-top:60px;}
-button{
- padding:12px 22px;
- background:#6e5c4b;
- color:white;
- border:none;
- border-radius:6px;
-}
+.footer-content{display:flex;justify-content:space-around;flex-wrap:wrap;}
+.card-link{text-decoration:none;color:inherit;}
+.whatsapp-float{position:fixed;bottom:20px;right:20px;width:60px;height:60px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 8px rgba(0,0,0,0.3);z-index:1000;}
+.whatsapp-float img{width:30px;}
+.card{transition:transform .3s, box-shadow .3s;}
+.card:hover{transform:translateY(-6px); box-shadow:0 8px 16px rgba(0,0,0,0.2);}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+.card{animation:fadeIn 0.5s ease-in-out;}
+</style>
 </style>
 </head>
 <body>
