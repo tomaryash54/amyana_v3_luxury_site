@@ -6,6 +6,9 @@ import Reiki from "./pages/Reiki"
 import Journal from "./pages/Journal"
 import GiftCards from "./pages/GiftCards"
 import Sound from "./pages/Sound"
+import Workshops from "./pages/Workshops"
+import Corporate from "./pages/Corporate"
+import Hospitality from "./pages/Hospitality"
 
 function Nav(){
 return(
@@ -92,6 +95,9 @@ return(
 <Route path="/reiki" element={<Reiki/>}/>
 <Route path="/journal" element={<Journal/>}/>
 <Route path="/gift" element={<GiftCards/>}/>
+<Route path="/workshops" element={<Workshops/>}/>
+<Route path="/corporate" element={<Corporate/>}/>
+<Route path="/hospitality" element={<Hospitality/>}/>
 </Routes>
 <Footer/>
 <FloatingWhatsApp/>

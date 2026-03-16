@@ -16,21 +16,21 @@ return(
 
 <div className="grid grid-3">
 
-<Link to="/gift" className="card-link">
+<Link to="/workshops" className="card-link">
 <div className="card">
 <img src="/images/workshops.jpg"/>
 <h3>Workshops & Retreats</h3>
 </div>
 </Link>
 
-<Link to="/reiki" className="card-link">
+<Link to="/corporate" className="card-link">
 <div className="card">
 <img src="/images/corporate.jpg"/>
 <h3>Corporate Wellness</h3>
 </div>
 </Link>
 
-<Link to="/sound" className="card-link">
+<Link to="/hospitality" className="card-link">
 <div className="card">
 <img src="/images/hospitality.jpg"/>
 <h3>Hospitality Wellness</h3>
