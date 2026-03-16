@@ -1,7 +1,7 @@
 
 export default function Sound(){
 return(
-<div className="container">
+<div className="container sound-page">
 <h1>Sound Healing</h1>
 
 <section className="page-section">
