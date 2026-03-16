@@ -1,5 +1,6 @@
 
 import {BrowserRouter,Routes,Route,Link} from "react-router-dom"
+import {useState, useEffect} from "react"
 import Home from "./pages/Home"
 import Reiki from "./pages/Reiki"
 import Journal from "./pages/Journal"
@@ -21,6 +22,34 @@ return(
 )
 }
 
+function InstagramCarousel(){
+const images = ['/images/footer1.jpg', '/images/footer2.jpg', '/images/footer3.jpg', '/images/footer4.jpg', '/images/footer5.jpg', '/images/footer6.jpg']
+const [currentIndex, setCurrentIndex] = useState(0)
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentIndex((prev) => (prev + 1) % images.length)
+  }, 3000)
+  return () => clearInterval(interval)
+}, [])
+
+const nextImage = () => setCurrentIndex((prev) => (prev + 1) % images.length)
+const prevImage = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
+
+return(
+<div className="instagram-carousel">
+<button className="carousel-btn carousel-prev" onClick={prevImage}>&#10094;</button>
+<img src={images[currentIndex]} alt="Instagram feed" className="carousel-image"/>
+<button className="carousel-btn carousel-next" onClick={nextImage}>&#10095;</button>
+<div className="carousel-dots">
+{images.map((_, idx) => (
+<span key={idx} className={`dot ${idx === currentIndex ? 'active' : ''}`} onClick={() => setCurrentIndex(idx)}></span>
+))}
+</div>
+</div>
+)
+}
+
 function Footer(){
 return(
 <footer>
@@ -37,12 +66,7 @@ return(
 </div>
 <div>
 <h3>Instagram Feed</h3>
-<img src="/images/footer1.jpg" alt="Instagram 1" style={{width:'100px', margin:'5px'}}/>
-<img src="/images/footer2.jpg" alt="Instagram 2" style={{width:'100px', margin:'5px'}}/>
-<img src="/images/footer3.jpg" alt="Instagram 3" style={{width:'100px', margin:'5px'}}/>
-<img src="/images/footer4.jpg" alt="Instagram 4" style={{width:'100px', margin:'5px'}}/>
-<img src="/images/footer5.jpg" alt="Instagram 5" style={{width:'100px', margin:'5px'}}/>
-<img src="/images/footer6.jpg" alt="Instagram 6" style={{width:'100px', margin:'5px'}}/>
+<InstagramCarousel/>
 </div>
 </div>
 <p>© AMYANA Wellness</p>
