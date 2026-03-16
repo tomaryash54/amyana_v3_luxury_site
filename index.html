@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMYANA Wellness</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+body{
+ margin:0;
+ font-family:'Inter',sans-serif;
+ background:#faf8f5;
+ color:#2c2c2c;
+}
+h1,h2,h3{font-family:'Playfair Display',serif;}
+a{text-decoration:none;color:inherit;}
+.container{max-width:1200px;margin:auto;padding:40px 20px;}
+.grid{display:grid;gap:30px;}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+.hero{
+ height:90vh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ background:url('/images/hero.jpg') center/cover no-repeat;
+ color:white;
+}
+.hero h1{font-size:52px;}
+.card img{width:100%;border-radius:10px;}
+.card{transition:transform .3s;}
+.card:hover{transform:translateY(-6px);}
+.nav{
+ display:flex;
+ justify-content:space-between;
+ padding:20px 40px;
+ position:sticky;
+ top:0;
+ background:white;
+}
+footer{background:#ede7de;padding:40px;text-align:center;margin-top:60px;}
+button{
+ padding:12px 22px;
+ background:#6e5c4b;
+ color:white;
+ border:none;
+ border-radius:6px;
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
