@@ -23,7 +23,7 @@ return(
 }
 
 function InstagramCarousel(){
-const images = ['/images/footer1.jpg', '/images/footer2.jpg', '/images/footer3.jpg', '/images/footer4.jpg', '/images/footer5.jpg', '/images/footer6.jpg']
+const images = ['/images/footer1.jpg', '/images/footer2.jpg', '/images/footer3.jpg', '/images/footer4.jpg', '/images/footer5.jpg']
 const [currentIndex, setCurrentIndex] = useState(0)
 
 useEffect(() => {
