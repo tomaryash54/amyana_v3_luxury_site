@@ -37,9 +37,12 @@ return(
 </div>
 <div>
 <h3>Instagram Feed</h3>
-<img src="/images/gift1.jpg" alt="Instagram 1" style={{width:'100px', margin:'5px'}}/>
-<img src="/images/gift2.jpg" alt="Instagram 2" style={{width:'100px', margin:'5px'}}/>
-<img src="/images/gift3.jpg" alt="Instagram 3" style={{width:'100px', margin:'5px'}}/>
+<img src="/images/footer1.jpg" alt="Instagram 1" style={{width:'100px', margin:'5px'}}/>
+<img src="/images/footer2.jpg" alt="Instagram 2" style={{width:'100px', margin:'5px'}}/>
+<img src="/images/footer3.jpg" alt="Instagram 3" style={{width:'100px', margin:'5px'}}/>
+<img src="/images/footer4.jpg" alt="Instagram 4" style={{width:'100px', margin:'5px'}}/>
+<img src="/images/footer5.jpg" alt="Instagram 5" style={{width:'100px', margin:'5px'}}/>
+<img src="/images/footer6.jpg" alt="Instagram 6" style={{width:'100px', margin:'5px'}}/>
 </div>
 </div>
 <p>© AMYANA Wellness</p>
