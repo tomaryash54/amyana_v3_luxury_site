@@ -15,7 +15,7 @@ return(
 <div className="grid grid-3">
 
 <div className="card">
-<img src="/images/workshop.jpg"/>
+<img src="/images/workshops.jpg"/>
 <h3>Workshops & Retreats</h3>
 </div>
 
@@ -35,7 +35,7 @@ return(
 </div>
 
 <div className="card">
-<img src="/images/healing.jpg"/>
+<img src="/images/journal.jpg"/>
 <h3>Personal Healing</h3>
 </div>
 
