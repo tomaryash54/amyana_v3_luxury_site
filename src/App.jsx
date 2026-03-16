@@ -14,9 +14,17 @@ function Nav(){
 return(
 <div className="nav">
 <div><b>AMYANA</b></div>
-<div style={{display:"flex",gap:20}}>
+<div style={{display:"flex",gap:30}}>
 <Link to="/">Home</Link>
-<Link to="/sound">Sound</Link>
+<div className="nav-dropdown">
+<span>Offerings</span>
+<div className="dropdown-content">
+<Link to="/workshops">Workshops & Retreats</Link>
+<Link to="/corporate">Corporate Wellness</Link>
+<Link to="/hospitality">Hospitality Wellness</Link>
+<Link to="/sound">Sound Baths</Link>
+</div>
+</div>
 <Link to="/reiki">Reiki</Link>
 <Link to="/journal">Journal</Link>
 <Link to="/gift">Gift Cards</Link>
