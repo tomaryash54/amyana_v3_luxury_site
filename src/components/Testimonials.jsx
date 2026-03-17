@@ -1,9 +1,6 @@
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  
   // Testimonials array with 8 handwritten testimonial images
   const testimonials = [
     { image: '/images/testimonial1.jpg', alt: 'Testimonial 1' },
@@ -16,54 +13,27 @@ export default function Testimonials() {
     { image: '/images/testimonial8.jpg', alt: 'Testimonial 8' },
   ]
 
-  useEffect(() => {
-    if (testimonials.length === 0) return
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-    }, 5000) // Rotate every 5 seconds
-
-    return () => clearInterval(interval)
-  }, [testimonials.length])
-
   if (testimonials.length === 0) {
-    return null // Don't render if no testimonials
+    return null
   }
 
-  const currentTestimonial = testimonials[currentIndex]
-
   return (
-    <div className="testimonials-container">
-      <div className="testimonials-inner">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8 }}
-            className="testimonial-slide"
-          >
-            <img 
-              src={currentTestimonial.image} 
-              alt={currentTestimonial.alt}
-              className="testimonial-image"
-            />
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Dots Indicator */}
-        <div className="testimonial-dots">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              className={`dot ${index === currentIndex ? 'active' : ''}`}
-              onClick={() => setCurrentIndex(index)}
-              aria-label={`Go to testimonial ${index + 1}`}
-            />
-          ))}
-        </div>
-      </div>
+    <div className="testimonials-grid-container">
+      {testimonials.map((testimonial, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          className="testimonial-grid-item"
+        >
+          <img 
+            src={testimonial.image} 
+            alt={testimonial.alt}
+            className="testimonial-grid-image"
+          />
+        </motion.div>
+      ))}
     </div>
   )
 }
