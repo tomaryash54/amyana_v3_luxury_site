@@ -68,11 +68,15 @@ return(
 <div className="instagram-wrapper">
 <h3>Follow Our Journey</h3>
 <div className="instagram-embed">
-<a href="https://www.instagram.com/amyana.official" target="_blank" rel="noopener noreferrer" className="instagram-cta">
-<img src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram" className="instagram-icon"/>
-<p>Join us on Instagram</p>
-<p className="instagram-handle">@amyana.official</p>
-</a>
+<iframe 
+src="https://www.instagram.com/amyana.official/embed" 
+width="100%" 
+height="350"
+frameBorder="0"
+scrolling="no"
+allowTransparency="true"
+style={{borderRadius: '12px'}}
+></iframe>
 </div>
 </div>
 </div>
