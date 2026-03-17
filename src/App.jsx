@@ -33,24 +33,34 @@ return(
 )
 }
 
-function InstagramEmbed(){
+function InstagramGridCarousel(){
+const images = ['/images/footer1.jpg', '/images/footer2.jpg', '/images/footer3.jpg', '/images/footer4.jpg', '/images/footer5.jpg', '/images/footer1.jpg']
+const [currentIndex, setCurrentIndex] = useState(0)
+
 useEffect(() => {
-  // Load Instagram embed script
-  if (window.instgrm) {
-    window.instgrm.Embeds.process()
-  }
+  const interval = setInterval(() => {
+    setCurrentIndex((prev) => (prev + 1) % images.length)
+  }, 4000)
+  return () => clearInterval(interval)
 }, [])
 
+const getVisibleImages = () => {
+  const visible = []
+  for (let i = 0; i < 6; i++) {
+    visible.push(images[(currentIndex + i) % images.length])
+  }
+  return visible
+}
+
 return(
-<div className="instagram-embed-container">
-<iframe 
-src="https://www.instagram.com/amyana.official/embed" 
-width="100%" 
-height="500" 
-frameBorder="0" 
-scrolling="no" 
-allowTransparency="true">
-</iframe>
+<div className="instagram-grid-carousel">
+<div className="grid-container">
+{getVisibleImages().map((img, idx) => (
+<div key={idx} className="grid-item">
+<img src={img} alt={`Instagram post ${idx + 1}`}/>
+</div>
+))}
+</div>
 </div>
 )
 }
@@ -73,7 +83,7 @@ return(
 
 <div className="footer-instagram">
 <h3>Instagram Feed</h3>
-<InstagramEmbed/>
+<InstagramGridCarousel/>
 </div>
 
 <p className="footer-copyright">© AMYANA Wellness</p>
