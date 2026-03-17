@@ -20,7 +20,7 @@ return(
 
 <Link to="/workshops" className="offering-card">
 <div className="card-image-wrapper">
-<img src="/images/workshops.jpg" alt="Workshops & Retreats"/>
+<img src="/images/workshops.jpg" alt="Workshops & Retreats" loading="lazy" decoding="async"/>
 <div className="card-overlay"></div>
 </div>
 <div className="card-content">
@@ -30,7 +30,7 @@ return(
 
 <Link to="/corporate" className="offering-card">
 <div className="card-image-wrapper">
-<img src="/images/corporate.jpg" alt="Corporate Wellness"/>
+<img src="/images/corporate.jpg" alt="Corporate Wellness" loading="lazy" decoding="async"/>
 <div className="card-overlay"></div>
 </div>
 <div className="card-content">
@@ -40,7 +40,7 @@ return(
 
 <Link to="/hospitality" className="offering-card">
 <div className="card-image-wrapper">
-<img src="/images/hospitality.jpg" alt="Hospitality Wellness"/>
+<img src="/images/hospitality.jpg" alt="Hospitality Wellness" loading="lazy" decoding="async"/>
 <div className="card-overlay"></div>
 </div>
 <div className="card-content">
@@ -50,7 +50,7 @@ return(
 
 <Link to="/sound" className="offering-card">
 <div className="card-image-wrapper">
-<img src="/images/private.jpg" alt="Private Sound Baths"/>
+<img src="/images/private.jpg" alt="Private Sound Baths" loading="lazy" decoding="async"/>
 <div className="card-overlay"></div>
 </div>
 <div className="card-content">
@@ -60,7 +60,7 @@ return(
 
 <Link to="/our-story" className="offering-card">
 <div className="card-image-wrapper">
-<img src="/images/journal.jpg" alt="Personal Healing"/>
+<img src="/images/journal.jpg" alt="Personal Healing" loading="lazy" decoding="async"/>
 <div className="card-overlay"></div>
 </div>
 <div className="card-content">
@@ -70,7 +70,7 @@ return(
 
 <Link to="/reiki" className="offering-card">
 <div className="card-image-wrapper">
-<img src="/images/reiki.jpg" alt="Reiki Healing"/>
+<img src="/images/reiki.jpg" alt="Reiki Healing" loading="lazy" decoding="async"/>
 <div className="card-overlay"></div>
 </div>
 <div className="card-content">
@@ -143,7 +143,7 @@ return(
 </div>
 
 <div className="meet-healer-image">
-<img src="/images/footer1.jpg" alt="Amy - Sound and Reiki Healer"/>
+<img src="/images/footer1.jpg" alt="Amy - Sound and Reiki Healer" loading="lazy" decoding="async"/>
 </div>
 </div>
 </section>

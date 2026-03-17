@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion, useReducedMotion } from "framer-motion"
 
 const containerVariants = {
   hidden: { opacity: 0, y: 12 },
@@ -33,13 +33,14 @@ export default function RevealOnScroll({
   variants: customVariants,
   ...props 
 }) {
+  const prefersReducedMotion = useReducedMotion()
   const variants = customVariants || containerVariants
 
   return (
     <motion.div
       className={className}
-      initial="hidden"
-      whileInView="visible"
+      initial={prefersReducedMotion ? false : "hidden"}
+      whileInView={prefersReducedMotion ? undefined : "visible"}
       viewport={{ once: true, amount: 0.1 }}
       variants={variants}
       custom={{ stagger }}

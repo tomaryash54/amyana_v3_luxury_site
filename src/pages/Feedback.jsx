@@ -1,4 +1,5 @@
 import React from 'react'
+import './Feedback.css'
 
 export default function Feedback() {
   const testimonials = [
@@ -30,6 +31,8 @@ export default function Feedback() {
                   src={testimonial.image} 
                   alt={testimonial.alt}
                   className="feedback-img"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
             ))}

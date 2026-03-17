@@ -5,6 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AMYANA Wellness</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 body{
@@ -24,7 +26,7 @@ a{text-decoration:none;color:inherit;}
  align-items:center;
  justify-content:center;
  text-align:center;
- background:url('/images/reiki-bg.jpg.png') center/cover no-repeat fixed;
+ background:url('/images/reiki-bg.jpg.png') center/cover no-repeat;
  color:white;
  position:relative;
  overflow:hidden;
@@ -430,8 +432,7 @@ footer{background:#ede7de;padding:0;margin-top:60px;}
 .card{transition:transform .3s, box-shadow .3s;}
 .card:hover{transform:translateY(-6px); box-shadow:0 8px 16px rgba(0,0,0,0.2);}
 @keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-.card{animation:fadeIn 0.5s ease-in-out;}
-.page-section{margin:40px 0;padding:30px 20px;background:#ffffff;border-radius:0;animation:fadeIn 0.6s ease-in-out;border-top:1px solid rgba(110,92,75,0.1);border-bottom:1px solid rgba(110,92,75,0.1);}
+.page-section{margin:40px 0;padding:30px 20px;background:#ffffff;border-radius:0;border-top:1px solid rgba(110,92,75,0.1);border-bottom:1px solid rgba(110,92,75,0.1);}
 .service-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;margin:20px 0;}
 .service-item{padding:20px;background:white;border-left:4px solid #6e5c4b;border-radius:6px;transition:transform 0.3s, box-shadow 0.3s;}
 .service-item:hover{transform:translateX(5px);box-shadow:0 4px 12px rgba(0,0,0,0.1);}
@@ -440,19 +441,19 @@ footer{background:#ede7de;padding:0;margin-top:60px;}
 ul{list-style-position:inside;color:#666;line-height:1.8;}
 ul li{margin:8px 0;}
 h4{color:#6e5c4b;margin-top:20px;font-weight:500;font-size:16px;letter-spacing:0.5px;}
-.sound-page{background:url('/images/reiki-bg.jpg.png') center/cover fixed;background-color:#ffffff;position:relative;}
+.sound-page{background:url('/images/reiki-bg.jpg.png') center/cover no-repeat;background-color:#ffffff;position:relative;}
 .sound-page > *{position:relative;z-index:1;}
 .sound-page::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,0.92);z-index:0;}
-.workshops-page{background:url('/images/workshops.jpg') center/cover fixed;background-color:#ffffff;position:relative;}
+.workshops-page{background:url('/images/workshops.jpg') center/cover no-repeat;background-color:#ffffff;position:relative;}
 .workshops-page > *{position:relative;z-index:1;}
 .workshops-page::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,0.92);z-index:0;}
-.corporate-page{background:url('/images/corporate.jpg') center/cover fixed;background-color:#ffffff;position:relative;}
+.corporate-page{background:url('/images/corporate.jpg') center/cover no-repeat;background-color:#ffffff;position:relative;}
 .corporate-page > *{position:relative;z-index:1;}
 .corporate-page::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,0.92);z-index:0;}
-.hospitality-page{background:url('/images/hospitality.jpg') center/cover fixed;background-color:#ffffff;position:relative;}
+.hospitality-page{background:url('/images/hospitality.jpg') center/cover no-repeat;background-color:#ffffff;position:relative;}
 .hospitality-page > *{position:relative;z-index:1;}
 .hospitality-page::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,0.92);z-index:0;}
-.our-story-page{background:linear-gradient(135deg,rgba(245,241,236,0.3) 0%,rgba(237,231,222,0.2) 100%);position:relative;background-attachment:fixed;}
+.our-story-page{background:linear-gradient(135deg,rgba(245,241,236,0.3) 0%,rgba(237,231,222,0.2) 100%);position:relative;}
 .our-story-page > *{position:relative;z-index:1;}
 .meet-healer{background:#ffffff;padding:80px 20px;margin-top:40px;}
 .meet-healer-content{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
@@ -490,7 +491,7 @@ h4{color:#6e5c4b;margin-top:20px;font-weight:500;font-size:16px;letter-spacing:0
 .container h1{font-size:48px;font-weight:600;color:#2c2c2c;margin-bottom:40px;letter-spacing:-1px;}
 .container h2{font-size:52px;font-weight:500;color:#2c2c2c;margin-bottom:40px;letter-spacing:0.5px;position:relative;padding-bottom:20px;text-align:center;}
 .container h2::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:50px;height:2px;background:#6e5c4b;border-radius:2px;}
-.page-section{margin:50px 0;padding:40px 30px;background:linear-gradient(135deg,rgba(245,241,236,0.6) 0%,rgba(237,231,222,0.4) 100%);border-radius:12px;animation:fadeIn 0.6s ease-in-out;}
+.page-section{margin:50px 0;padding:40px 30px;background:linear-gradient(135deg,rgba(245,241,236,0.6) 0%,rgba(237,231,222,0.4) 100%);border-radius:12px;}
 .page-section h2{margin-top:0;}
 .page-section h3{font-size:24px;color:#6e5c4b;margin:25px 0 15px 0;font-weight:500;}
 .page-section h4{font-size:16px;color:#6e5c4b;margin:20px 0 10px 0;font-weight:600;text-transform:uppercase;letter-spacing:1px;}
@@ -515,7 +516,7 @@ h4{color:#6e5c4b;margin-top:20px;font-weight:500;font-size:16px;letter-spacing:0
 .approach-item:hover{transform:translateY(-5px);box-shadow:0 8px 16px rgba(0,0,0,0.12);}
 .approach-item h4{color:#6e5c4b;margin-top:0;font-size:16px;font-weight:600;letter-spacing:0.5px;}
 .approach-item p{color:#666;font-size:14px;line-height:1.7;}
-.reiki-page{background:url('/images/reiki-healer.jpg.png') center/cover fixed;background-color:#faf8f5;position:relative;}
+.reiki-page{background:url('/images/reiki-healer.jpg.png') center/cover no-repeat;background-color:#faf8f5;position:relative;}
 .reiki-page > *{position:relative;z-index:1;}
 .reiki-page::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(250,248,245,0.87);z-index:0;}
 .hero-section{background:linear-gradient(135deg,rgba(250,248,245,0.95) 0%,rgba(237,231,222,0.9) 100%);border-left:none;border-top:4px solid #6e5c4b;padding:50px 40px;}
@@ -567,6 +568,7 @@ h4{color:#6e5c4b;margin-top:20px;font-weight:500;font-size:16px;letter-spacing:0
 .flip-card-back .btn-primary{align-self:center;margin-top:auto;padding:12px 24px;font-size:13px;}
 @media(max-width:1024px){.gift-cards-grid{grid-template-columns:repeat(2,1fr);gap:30px;}.grid-container{grid-template-columns:repeat(2,1fr);gap:10px;}}
 @media(max-width:768px){.flip-card{height:350px;}.gift-cards-grid{grid-template-columns:1fr;}.gift-intro h1{font-size:32px;}.flip-card-back{padding:20px;font-size:12px;}.flip-card-back h4{font-size:12px;}.footer-top{flex-direction:column;padding:30px;}.footer-section{min-width:100%;padding:20px 0;border-bottom:1px solid rgba(110,92,75,0.1);}.footer-instagram{padding:20px;}.grid-container{grid-template-columns:repeat(2,1fr);gap:8px;}}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important;}}
 </style>
 </head>
 <body>

@@ -1,15 +1,16 @@
 
 import {BrowserRouter,Routes,Route,Link} from "react-router-dom"
-import {useState} from "react"
-import Home from "./pages/Home"
-import Reiki from "./pages/Reiki"
-import GiftCards from "./pages/GiftCards"
-import Sound from "./pages/Sound"
-import Workshops from "./pages/Workshops"
-import Corporate from "./pages/Corporate"
-import Hospitality from "./pages/Hospitality"
-import OurStory from "./pages/OurStory"
-import Feedback from "./pages/Feedback"
+import {useState, Suspense, lazy} from "react"
+
+const Home = lazy(() => import("./pages/Home"))
+const Reiki = lazy(() => import("./pages/Reiki"))
+const GiftCards = lazy(() => import("./pages/GiftCards"))
+const Sound = lazy(() => import("./pages/Sound"))
+const Workshops = lazy(() => import("./pages/Workshops"))
+const Corporate = lazy(() => import("./pages/Corporate"))
+const Hospitality = lazy(() => import("./pages/Hospitality"))
+const OurStory = lazy(() => import("./pages/OurStory"))
+const Feedback = lazy(() => import("./pages/Feedback"))
 
 function Nav(){
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -117,6 +118,7 @@ export default function App(){
 return(
 <BrowserRouter>
 <Nav/>
+<Suspense fallback={<div className="container" style={{padding: '40px 20px'}}>Loading...</div>}>
 <Routes>
 <Route path="/" element={<Home/>}/>
 <Route path="/sound" element={<Sound/>}/>
@@ -128,6 +130,7 @@ return(
 <Route path="/our-story" element={<OurStory/>}/>
 <Route path="/feedback" element={<Feedback/>}/>
 </Routes>
+</Suspense>
 <Footer/>
 <FloatingWhatsApp/>
 </BrowserRouter>
