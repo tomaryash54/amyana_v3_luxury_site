@@ -3,7 +3,6 @@ import {BrowserRouter,Routes,Route,Link} from "react-router-dom"
 import {useState, useEffect} from "react"
 import Home from "./pages/Home"
 import Reiki from "./pages/Reiki"
-import Journal from "./pages/Journal"
 import GiftCards from "./pages/GiftCards"
 import Sound from "./pages/Sound"
 import Workshops from "./pages/Workshops"
@@ -32,8 +31,8 @@ return(
 </div>
 </div>
 
-<Link to="/reiki" className="nav-item">Reiki</Link>
-<Link to="/journal" className="nav-item">Journal</Link>
+  <Link to="/reiki" className="nav-item">Reiki</Link>
+  <Link to="/our-story" className="nav-item">Our Story</Link>
 <Link to="/gift" className="nav-item">Gift Cards</Link>
 </div>
 
@@ -114,8 +113,7 @@ return(
 <Routes>
 <Route path="/" element={<Home/>}/>
 <Route path="/sound" element={<Sound/>}/>
-<Route path="/reiki" element={<Reiki/>}/>
-<Route path="/journal" element={<Journal/>}/>
+  <Route path="/reiki" element={<Reiki/>}/>
 <Route path="/gift" element={<GiftCards/>}/>
 <Route path="/workshops" element={<Workshops/>}/>
 <Route path="/corporate" element={<Corporate/>}/>

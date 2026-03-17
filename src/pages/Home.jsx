@@ -58,13 +58,13 @@ return(
 </div>
 </Link>
 
-<Link to="/journal" className="offering-card">
+<Link to="/our-story" className="offering-card">
 <div className="card-image-wrapper">
 <img src="/images/journal.jpg" alt="Personal Healing"/>
 <div className="card-overlay"></div>
 </div>
 <div className="card-content">
-<h3>Personal Healing</h3>
+<h3>Our Story</h3>
 </div>
 </Link>
 
@@ -138,7 +138,7 @@ return(
 
 <div className="healer-buttons">
 <Link to="/our-story" className="btn-primary">KNOW OUR STORY</Link>
-<a href="https://wa.me/8448658684" target="_blank" rel="noopener noreferrer" className="btn-secondary">BOOK A CONSULTATION</a>
+<a href="https://forms.gle/wANCNbyqWHN4cgjz7" target="_blank" rel="noopener noreferrer" className="btn-secondary">BOOK A CONSULTATION</a>
 </div>
 </div>
 

@@ -11,8 +11,8 @@ return(
 
 <section className="page-section featured-workshop">
 <h2>Featured Workshop</h2>
-<h3>Moon Salutation Sound Bath</h3>
-<p className="date-tag">(date to be announced soon)</p>
+<h2>Moon Salutation Sound Bath</h2>
+<p className="date-tag">Every Full Moon</p>
 
 <p>An intimate moon immersion blending conscious movement, breath, and sound.<br/>
 Inspired by lunar cycles, this experience guides you through gentle Moon Salutations followed by a deeply restorative sound journey.</p>

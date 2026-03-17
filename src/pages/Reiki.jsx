@@ -7,7 +7,7 @@ return(
 <section className="page-section hero-section">
 <h2>Subtle Energy. Intentional Alignment.</h2>
 <p>A restorative practice rooted in conscious touch and energetic awareness. Reiki supports emotional balance, clarity, and gentle nervous system regulation — both in-person and at a distance.</p>
-<a href="https://wa.me/8448658684" target="_blank" rel="noopener noreferrer" className="btn-primary">Schedule a Consultation</a>
+<a href="https://forms.gle/wANCNbyqWHN4cgjz7" target="_blank" rel="noopener noreferrer" className="btn-primary">Schedule a Consultation</a>
 </section>
 
 <section className="page-section">
