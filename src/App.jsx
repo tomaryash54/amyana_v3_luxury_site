@@ -13,9 +13,16 @@ import Feedback from "./pages/Feedback"
 
 function Nav(){
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+const [dropdownOpen, setDropdownOpen] = useState(false)
 
 const closeMenu = () => {
   setMobileMenuOpen(false)
+  setDropdownOpen(false)
+}
+
+const toggleDropdown = (e) => {
+  e.stopPropagation()
+  setDropdownOpen(!dropdownOpen)
 }
 
 return(
@@ -25,9 +32,9 @@ return(
 <div className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`}>
 <Link to="/" className="nav-item" onClick={closeMenu}>Home</Link>
 
-<div className="nav-dropdown">
+<div className={`nav-dropdown ${dropdownOpen ? 'active' : ''}`} onClick={toggleDropdown}>
 <span className="nav-item">Offerings</span>
-<div className="dropdown-content">
+<div className={`dropdown-content ${dropdownOpen ? 'active' : ''}`}>
 <Link to="/workshops" onClick={closeMenu}>Workshops & Retreats</Link>
 <Link to="/corporate" onClick={closeMenu}>Corporate Wellness</Link>
 <Link to="/hospitality" onClick={closeMenu}>Hospitality Wellness</Link>

@@ -252,6 +252,11 @@ a{text-decoration:none;color:inherit;}
  visibility:visible;
  transform:translateY(0);
 }
+.dropdown-content.active{
+ opacity:1;
+ visibility:visible;
+ transform:translateY(0);
+}
 .dropdown-content a{
  display:block;
  padding:14px 24px;
@@ -365,6 +370,11 @@ a{text-decoration:none;color:inherit;}
  .nav-dropdown:hover .dropdown-content{
   opacity:0;
   visibility:hidden;
+ }
+ .dropdown-content.active{
+  opacity:1;
+  visibility:visible;
+  display:block;
  }
  .dropdown-content a{
   padding:12px 20px 12px 40px;

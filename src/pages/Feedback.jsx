@@ -87,7 +87,7 @@ export default function Feedback() {
             <p>Share your healing journey with us</p>
             <button
               onClick={() => window.open('https://wa.me/8448658684?text=Hi%20Amy%2C%20I%20would%20like%20to%20share%20my%20feedback%20about%20my%20experience%20with%20Amyana.', '_blank')}
-              className="btn-feedback-premium"
+              className="btn-primary"
             >
               Give Us Your Feedback
             </button>
