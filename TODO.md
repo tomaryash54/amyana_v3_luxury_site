@@ -1,14 +1,14 @@
-# Typography System TODO
+# Animation Implementation TODO
 
 ## Plan Summary
-Global CSS: Playfair headings + Inter body, premium hierarchy/spacing.
+Enhance RevealOnScroll for elegant fade-up + stagger. Add examples in Home.jsx.
 
 ## Steps
-- [x] Step 1: Create src/index.css (fonts, vars, h1-h3/p rules)
-- [x] Step 2: Update src/main.jsx (import index.css)
-- [x] Step 3: Update index.html (fonts link, body cleanup)
-- [x] Step 4: Test `npm run dev` on multiple pages
+- [x] Step 1: Update src/components/RevealOnScroll.jsx (refine variants, easing, y-motion)
+- [x] Step 2: Update src/pages/Home.jsx (wrap offerings-grid and steps-container with RevealOnScroll stagger=true)
+- [x] Step 3: Test with `npm run dev` - verify smooth scroll animations on Home
+- [x] Step 4: Document usage for other pages
 
 ## Completed!
-Premium typography system implemented. Dev server reloaded – view pages for Playfair h1-h3, Inter body, breathable spacing.
+Reusable animation wrapper ready. Test with dev server.
 
