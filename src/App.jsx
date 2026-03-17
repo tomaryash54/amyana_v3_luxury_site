@@ -9,6 +9,7 @@ import Sound from "./pages/Sound"
 import Workshops from "./pages/Workshops"
 import Corporate from "./pages/Corporate"
 import Hospitality from "./pages/Hospitality"
+import OurStory from "./pages/OurStory"
 
 function Nav(){
 return(
@@ -103,6 +104,7 @@ return(
 <Route path="/workshops" element={<Workshops/>}/>
 <Route path="/corporate" element={<Corporate/>}/>
 <Route path="/hospitality" element={<Hospitality/>}/>
+<Route path="/our-story" element={<OurStory/>}/>
 </Routes>
 <Footer/>
 <FloatingWhatsApp/>
