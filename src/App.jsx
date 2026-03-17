@@ -12,13 +12,18 @@ import Hospitality from "./pages/Hospitality"
 import OurStory from "./pages/OurStory"
 
 function Nav(){
+const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+const [mobileOfferings, setMobileOfferings] = useState(false)
+
 return(
-<div className="nav">
-<div><b>AMYANA</b></div>
-<div style={{display:"flex",gap:30}}>
-<Link to="/">Home</Link>
+<nav className="nav">
+<Link to="/" className="nav-logo">AMYANA</Link>
+
+<div className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`}>
+<Link to="/" className="nav-item">Home</Link>
+
 <div className="nav-dropdown">
-<span>Offerings</span>
+<span className="nav-item">Offerings</span>
 <div className="dropdown-content">
 <Link to="/workshops">Workshops & Retreats</Link>
 <Link to="/corporate">Corporate Wellness</Link>
@@ -26,11 +31,22 @@ return(
 <Link to="/sound">Sound Baths</Link>
 </div>
 </div>
-<Link to="/reiki">Reiki</Link>
-<Link to="/journal">Journal</Link>
-<Link to="/gift">Gift Cards</Link>
+
+<Link to="/reiki" className="nav-item">Reiki</Link>
+<Link to="/journal" className="nav-item">Journal</Link>
+<Link to="/gift" className="nav-item">Gift Cards</Link>
 </div>
-</div>
+
+<button 
+  className={`hamburger ${mobileMenuOpen ? 'active' : ''}`}
+  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+  aria-label="Toggle menu"
+>
+<span></span>
+<span></span>
+<span></span>
+</button>
+</nav>
 )
 }
 
