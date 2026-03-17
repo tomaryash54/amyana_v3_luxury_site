@@ -33,30 +33,24 @@ return(
 )
 }
 
-function InstagramCarousel(){
-const images = ['/images/footer1.jpg', '/images/footer2.jpg', '/images/footer3.jpg', '/images/footer4.jpg', '/images/footer5.jpg']
-const [currentIndex, setCurrentIndex] = useState(0)
-
+function InstagramEmbed(){
 useEffect(() => {
-  const interval = setInterval(() => {
-    setCurrentIndex((prev) => (prev + 1) % images.length)
-  }, 3000)
-  return () => clearInterval(interval)
+  // Load Instagram embed script
+  if (window.instgrm) {
+    window.instgrm.Embeds.process()
+  }
 }, [])
 
-const nextImage = () => setCurrentIndex((prev) => (prev + 1) % images.length)
-const prevImage = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
-
 return(
-<div className="instagram-carousel">
-<button className="carousel-btn carousel-prev" onClick={prevImage}>&#10094;</button>
-<img src={images[currentIndex]} alt="Instagram feed" className="carousel-image"/>
-<button className="carousel-btn carousel-next" onClick={nextImage}>&#10095;</button>
-<div className="carousel-dots">
-{images.map((_, idx) => (
-<span key={idx} className={`dot ${idx === currentIndex ? 'active' : ''}`} onClick={() => setCurrentIndex(idx)}></span>
-))}
-</div>
+<div className="instagram-embed-container">
+<iframe 
+src="https://www.instagram.com/amyana.official/embed" 
+width="100%" 
+height="500" 
+frameBorder="0" 
+scrolling="no" 
+allowTransparency="true">
+</iframe>
 </div>
 )
 }
@@ -77,7 +71,7 @@ return(
 </div>
 <div>
 <h3>Instagram Feed</h3>
-<InstagramCarousel/>
+<InstagramEmbed/>
 </div>
 </div>
 <p>© AMYANA Wellness</p>
