@@ -16,14 +16,26 @@ function Nav(){
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 const [dropdownOpen, setDropdownOpen] = useState(false)
 
+const isMobileViewport = () => {
+  if (typeof window === "undefined") return false
+  return window.matchMedia("(max-width: 768px)").matches
+}
+
 const closeMenu = () => {
   setMobileMenuOpen(false)
   setDropdownOpen(false)
 }
 
 const toggleDropdown = (e) => {
+  if (!isMobileViewport()) return
   e.stopPropagation()
   setDropdownOpen((prev) => !prev)
+}
+
+const handleDesktopDropdownLeave = () => {
+  if (!isMobileViewport()) {
+    setDropdownOpen(false)
+  }
 }
 
 const toggleMobileMenu = () => {
@@ -33,6 +45,8 @@ const toggleMobileMenu = () => {
   })
 }
 
+const isDropdownActive = mobileMenuOpen && dropdownOpen
+
 return(
 <nav className="nav">
 <Link to="/" className="nav-logo" onClick={closeMenu}>AMYANA</Link>
@@ -40,18 +54,18 @@ return(
 <div className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`}>
 <Link to="/" className="nav-item" onClick={closeMenu}>Home</Link>
 
-<div className={`nav-dropdown ${dropdownOpen ? 'active' : ''}`}>
+<div className={`nav-dropdown ${isDropdownActive ? 'active' : ''}`} onMouseLeave={handleDesktopDropdownLeave}>
 <button
 type="button"
 className="nav-item nav-dropdown-trigger"
-aria-expanded={dropdownOpen}
+aria-expanded={isDropdownActive}
 aria-controls="offerings-menu"
 onClick={toggleDropdown}
 >
 <span>Offerings</span>
-<span className={`dropdown-arrow ${dropdownOpen ? 'open' : ''}`} aria-hidden="true">▾</span>
+<span className={`dropdown-arrow ${isDropdownActive ? 'open' : ''}`} aria-hidden="true">▾</span>
 </button>
-<div id="offerings-menu" className={`dropdown-content ${dropdownOpen ? 'active' : ''}`}>
+<div id="offerings-menu" className={`dropdown-content ${isDropdownActive ? 'active' : ''}`}>
 <Link to="/workshops" onClick={closeMenu}>Workshops & Retreats</Link>
 <Link to="/corporate" onClick={closeMenu}>Corporate Wellness</Link>
 <Link to="/hospitality" onClick={closeMenu}>Hospitality Wellness</Link>
