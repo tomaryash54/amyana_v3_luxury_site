@@ -9,6 +9,7 @@ import Workshops from "./pages/Workshops"
 import Corporate from "./pages/Corporate"
 import Hospitality from "./pages/Hospitality"
 import OurStory from "./pages/OurStory"
+import Feedback from "./pages/Feedback"
 
 function Nav(){
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -37,6 +38,7 @@ return(
   <Link to="/reiki" className="nav-item" onClick={closeMenu}>Reiki</Link>
   <Link to="/our-story" className="nav-item" onClick={closeMenu}>Our Story</Link>
 <Link to="/gift" className="nav-item" onClick={closeMenu}>Gift Cards</Link>
+<Link to="/feedback" className="nav-item" onClick={closeMenu}>Testimonials</Link>
 </div>
 
 <button 
@@ -117,6 +119,7 @@ return(
 <Route path="/corporate" element={<Corporate/>}/>
 <Route path="/hospitality" element={<Hospitality/>}/>
 <Route path="/our-story" element={<OurStory/>}/>
+<Route path="/feedback" element={<Feedback/>}/>
 </Routes>
 <Footer/>
 <FloatingWhatsApp/>

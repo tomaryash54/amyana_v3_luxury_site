@@ -1,6 +1,5 @@
 import {Link} from "react-router-dom"
 import RevealOnScroll, { fadeUpVariants } from "../components/RevealOnScroll"
-import Testimonials from "../components/Testimonials"
 
 export default function Home(){
 return(
@@ -146,13 +145,6 @@ return(
 <div className="meet-healer-image">
 <img src="/images/footer1.jpg" alt="Amy - Sound and Reiki Healer"/>
 </div>
-</div>
-</section>
-
-<section className="testimonials-section">
-<div className="container">
-<h2>What Our Clients Say</h2>
-<Testimonials />
 </div>
 </section>
 
