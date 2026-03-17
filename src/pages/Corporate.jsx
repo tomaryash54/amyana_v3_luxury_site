@@ -7,7 +7,7 @@ return(
 <section className="page-section">
 <h2>Nervous System–Led Corporate Wellbeing</h2>
 <p>Designed for modern teams navigating high performance and constant stimulation. These experiences restore clarity, emotional steadiness, and collective balance — without overwhelming schedules.</p>
-<button className="btn-primary">Enquire for Your Organisation</button>
+<a href="https://wa.me/8448658684" target="_blank" rel="noopener noreferrer" className="btn-primary">Enquire for Your Organisation</a>
 </section>
 
 <section className="page-section">
@@ -55,7 +55,7 @@ Blending sound immersion, guided practices, reflective sessions, and intentional
 
 <p>Custom-designed based on organisational needs.</p>
 
-<button className="btn-primary">Request a Proposal</button>
+<a href="https://wa.me/8448658684" target="_blank" rel="noopener noreferrer" className="btn-primary">Request a Proposal</a>
 </section>
 
 <section className="page-section add-on">

@@ -9,7 +9,7 @@ return(
 <h3>Personalised Sound Immersion</h3>
 <p>An intimate, one-on-one or private group experience designed to restore balance, soften internal tension, and guide the body into deep nervous system regulation.</p>
 <p>Each session is curated with intention, based on your emotional and energetic state.</p>
-<button>Book a Private Session</button>
+<a href="https://wa.me/8448658684" target="_blank" rel="noopener noreferrer" className="btn-primary">Book a Private Session</a>
 </section>
 
 <section className="page-section">

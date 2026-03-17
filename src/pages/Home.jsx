@@ -112,8 +112,8 @@ return(
 <p>Through AMYANA, she invites others to pause, listen, and return to their natural rhythm.</p>
 
 <div className="healer-buttons">
-<button className="btn-primary">KNOW OUR STORY</button>
-<button className="btn-secondary">BOOK A CONSULTATION</button>
+<a href="https://wa.me/8448658684" target="_blank" rel="noopener noreferrer" className="btn-primary">KNOW OUR STORY</a>
+<a href="https://wa.me/8448658684" target="_blank" rel="noopener noreferrer" className="btn-secondary">BOOK A CONSULTATION</a>
 </div>
 </div>
 

@@ -7,7 +7,7 @@ return(
 <section className="page-section">
 <h2>Elevated Wellness Experiences for Refined Spaces</h2>
 <p>AMYANA partners with boutique hotels, luxury properties, wellness spaces, and Retreat properties to integrate nervous system–led experiences into the guest journey - seamlessly, discreetly, and intentionally.</p>
-<button className="btn-primary">Collaborate With Us</button>
+<a href="https://wa.me/8448658684" target="_blank" rel="noopener noreferrer" className="btn-primary">Collaborate With Us</a>
 </section>
 
 <section className="page-section">

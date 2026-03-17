@@ -30,7 +30,7 @@ Inspired by lunar cycles, this experience guides you through gentle Moon Salutat
 <h4>Ideal For:</h4>
 <p>Those seeking emotional clarity, softness, and a return to inner rhythm.</p>
 
-<button className="btn-primary">Reserve Your Space</button>
+<a href="https://wa.me/8448658684" target="_blank" rel="noopener noreferrer" className="btn-primary">Reserve Your Space</a>
 </section>
 
 <section className="page-section coming-soon">
