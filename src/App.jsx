@@ -9,7 +9,6 @@ import Workshops from "./pages/Workshops"
 import Corporate from "./pages/Corporate"
 import Hospitality from "./pages/Hospitality"
 import OurStory from "./pages/OurStory"
-import Testimonials from "./components/Testimonials"
 
 function Nav(){
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -57,16 +56,9 @@ function Footer(){
 return(
 <footer>
 <div className="footer-premium-section">
-<div className="container">
-<h2>Voices of Transformation</h2>
-<div className="premium-content">
-<div className="testimonials-wrapper">
-<h3>What Our Clients Say</h3>
-<Testimonials />
-</div>
-
+<div className="container instagram-only">
+<h2>Follow Our Journey</h2>
 <div className="instagram-wrapper">
-<h3>Follow Our Journey</h3>
 <div className="instagram-embed">
 <iframe 
 src="https://www.instagram.com/amyana.official/embed" 
@@ -77,7 +69,6 @@ scrolling="no"
 allowTransparency="true"
 style={{borderRadius: '12px'}}
 ></iframe>
-</div>
 </div>
 </div>
 </div>

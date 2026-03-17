@@ -283,6 +283,13 @@ a:hover {
   justify-items: center;
 }
 
+.instagram-only {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+}
+
 /* Testimonials Wrapper */
 .testimonials-wrapper {
   display: flex;
@@ -299,6 +306,26 @@ a:hover {
   text-align: center;
 }
 
+/* Testimonials Section (Home Page) */
+.testimonials-section {
+  background: white;
+  padding: var(--space-10) var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.testimonials-section h2 {
+  text-align: center;
+  margin-bottom: var(--space-6);
+  font-size: clamp(1.5rem, 4vw, 1.8rem);
+  letter-spacing: var(--ls-tight);
+  color: var(--color-brand);
+}
+
+.testimonials-section .container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 /* Testimonials Carousel Container */
 .testimonials-carousel-container {
   display: flex;
@@ -312,24 +339,24 @@ a:hover {
 .testimonials-grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  gap: 6px;
   width: 100%;
-  max-width: 210px;
+  max-width: 160px;
   margin: 0 auto;
 }
 
 .testimonial-grid-item {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   aspect-ratio: 2/3;
 }
 
 .testimonial-grid-item:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 .testimonial-grid-image {
