@@ -33,28 +33,6 @@ return(
 )
 }
 
-function InstagramEmbed(){
-useEffect(() => {
-  // Load Instagram embed script
-  if (window.instgrm) {
-    window.instgrm.Embeds.process()
-  }
-}, [])
-
-return(
-<div className="instagram-embed-container">
-<iframe 
-src="https://www.instagram.com/amyana.official/embed" 
-width="100%" 
-height="350" 
-frameBorder="0" 
-scrolling="no" 
-allowTransparency="true">
-</iframe>
-</div>
-)
-}
-
 function Footer(){
 return(
 <footer>
@@ -72,8 +50,7 @@ return(
 </div>
 
 <div className="footer-instagram">
-<h3>Instagram Feed</h3>
-<InstagramEmbed/>
+<p><a href="https://www.instagram.com/amyana.official" target="_blank" rel="noopener noreferrer">Join us on Instagram @amyana.official</a></p>
 </div>
 
 <p className="footer-copyright">© AMYANA Wellness</p>
