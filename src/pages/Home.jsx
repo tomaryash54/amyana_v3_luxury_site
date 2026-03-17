@@ -61,6 +61,44 @@ return(
 </div>
 </div>
 
+<section className="how-it-works">
+<div className="container">
+<h2>How it Works</h2>
+
+<div className="steps-container">
+<div className="step">
+<div className="step-number">1</div>
+<h3>Consultation</h3>
+<p>Begin with a personalised consultation where we understand your emotional, energetic, and physical landscape, creating a foundation for intentional healing.</p>
+</div>
+
+<div className="step-connector"></div>
+
+<div className="step">
+<div className="step-number">2</div>
+<h3>Discovery</h3>
+<p>Through gentle exploration, we discover the specific modalities and practices that resonate most deeply with your system and needs.</p>
+</div>
+
+<div className="step-connector"></div>
+
+<div className="step">
+<div className="step-number">3</div>
+<h3>Experience</h3>
+<p>Engage in immersive healing sessions—sound baths, reiki, breathwork, or customised rituals—designed to restore balance and presence.</p>
+</div>
+
+<div className="step-connector"></div>
+
+<div className="step">
+<div className="step-number">4</div>
+<h3>Integration</h3>
+<p>Carry the healing forward with guidance on practices and rituals that support sustained nervous system regulation and inner stillness.</p>
+</div>
+</div>
+</div>
+</section>
+
 <section className="meet-healer">
 <div className="meet-healer-content">
 <div className="meet-healer-text">
@@ -80,7 +118,7 @@ return(
 </div>
 
 <div className="meet-healer-image">
-<img src="/images/healer.jpg" alt="Amy - Sound and Reiki Healer"/>
+<img src="/images/footer1.jpg" alt="Amy - Sound and Reiki Healer"/>
 </div>
 </div>
 </section>

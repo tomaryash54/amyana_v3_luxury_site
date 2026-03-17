@@ -150,9 +150,23 @@ h4{color:#6e5c4b;margin-top:20px;}
 .support-item p{color:#666;font-size:14px;line-height:1.7;margin:10px 0;}
 .closing-text{font-style:italic;color:#666;line-height:1.8;margin:20px 0;border-left:3px solid #6e5c4b;padding-left:20px;}
 .who-section .btn-primary{display:inline-block;margin-top:20px;}
+.how-it-works{background:linear-gradient(180deg,#faf8f5 0%,#f5f1ec 100%);padding:80px 0;margin:60px 0;position:relative;overflow:hidden;}
+.how-it-works > .container{max-width:1200px;margin:auto;padding:0 20px;}
+.how-it-works h2{text-align:center;font-size:42px;color:#2c2c2c;margin-bottom:60px;letter-spacing:-1px;position:relative;padding-bottom:20px;}
+.how-it-works h2::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:80px;height:3px;background:linear-gradient(90deg,#6e5c4b,#5a4a3a);border-radius:2px;}
+.steps-container{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;position:relative;align-items:start;}
+.step{text-align:center;padding:30px 20px;position:relative;}
+.step-number{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#6e5c4b 0%,#5a4a3a 100%);color:white;font-size:24px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 4px 12px rgba(110,92,75,0.2);transition:transform 0.3s;}
+.step:hover .step-number{transform:scale(1.1);}
+.step h3{color:#6e5c4b;font-size:18px;font-weight:600;margin:15px 0;letter-spacing:0.5px;}
+.step p{color:#666;font-size:14px;line-height:1.7;margin:0;}
+.step-connector{position:absolute;top:30px;width:calc(100% + 20px);height:2px;background:linear-gradient(90deg,transparent,#6e5c4b,transparent);left:-10px;display:none;}
+.step:not(:last-child) .step-connector{display:block;}
+@media(max-width:1024px){.steps-container{grid-template-columns:repeat(2,1fr);gap:30px;}.step-connector{display:none !important;}}
+@media(max-width:768px){.steps-container{grid-template-columns:1fr;gap:20px;}.how-it-works h2{font-size:28px;margin-bottom:40px;}.step{padding:20px 15px;}.step-number{width:50px;height:50px;font-size:20px;}}.who-section .btn-primary{display:inline-block;margin-top:20px;}
 @media(max-width:768px){.container h1{font-size:32px;}.container h2{font-size:24px;}.nav-dropdown .dropdown-content{left:-50px;min-width:160px;}.hero-section{padding:30px 20px;}.hero-section h2{font-size:28px;}}.coming-soon-text{font-size:24px;color:#6e5c4b;font-weight:600;margin:20px 0;}
 </style>
-  <script type="module" crossorigin src="/assets/index-B_9TpqHQ.js"></script>
+  <script type="module" crossorigin src="/assets/index-CA087aPF.js"></script>
 </head>
 <body>
 <div id="root"></div>
