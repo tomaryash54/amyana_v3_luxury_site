@@ -1,6 +1,6 @@
 
 import {BrowserRouter,Routes,Route,Link} from "react-router-dom"
-import {useState, useEffect} from "react"
+import {useState} from "react"
 import Home from "./pages/Home"
 import Reiki from "./pages/Reiki"
 import GiftCards from "./pages/GiftCards"
@@ -49,28 +49,6 @@ return(
 )
 }
 
-function InstagramEmbed(){
-useEffect(() => {
-  // Load Instagram embed script
-  if (window.instgrm) {
-    window.instgrm.Embeds.process()
-  }
-}, [])
-
-return(
-<div className="instagram-embed-container">
-<iframe 
-src="https://www.instagram.com/amyana.official/embed" 
-width="100%" 
-height="400" 
-frameBorder="0" 
-scrolling="no" 
-allowTransparency="true">
-</iframe>
-</div>
-)
-}
-
 function Footer(){
 return(
 <footer>
@@ -85,12 +63,6 @@ return(
 <p><a href="https://www.instagram.com/amyana.official" target="_blank">Instagram</a></p>
 <p><a href="https://www.linkedin.com/in/amibannu/" target="_blank">LinkedIn</a></p>
 </div>
-</div>
-
-<div className="footer-instagram">
-<h3>Join us on Instagram</h3>
-<p><a href="https://www.instagram.com/amyana.official" target="_blank" rel="noopener noreferrer">@amyana.official</a></p>
-<InstagramEmbed/>
 </div>
 
 <p className="footer-copyright">© AMYANA Wellness</p>
