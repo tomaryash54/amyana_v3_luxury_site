@@ -6,10 +6,10 @@ const containerVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1.2,
+      duration: 0.8,
       ease: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
       when: "beforeChildren",
-      staggerChildren: custom.stagger ? 0.25 : 0,
+      staggerChildren: custom.stagger ? 0.12 : 0,
     },
   }),
 }
@@ -20,7 +20,7 @@ export const fadeUpVariants = {
     opacity: 1,
     y: 0,
     transition: { 
-      duration: 1.2, 
+      duration: 0.8, 
       ease: "cubic-bezier(0.25, 0.46, 0.45, 0.94)" 
     },
   },
@@ -40,7 +40,7 @@ export default function RevealOnScroll({
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={variants}
       custom={{ stagger }}
       {...props}
