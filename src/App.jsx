@@ -23,7 +23,14 @@ const closeMenu = () => {
 
 const toggleDropdown = (e) => {
   e.stopPropagation()
-  setDropdownOpen(!dropdownOpen)
+  setDropdownOpen((prev) => !prev)
+}
+
+const toggleMobileMenu = () => {
+  setMobileMenuOpen((prev) => {
+    if (prev) setDropdownOpen(false)
+    return !prev
+  })
 }
 
 return(
@@ -33,9 +40,18 @@ return(
 <div className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`}>
 <Link to="/" className="nav-item" onClick={closeMenu}>Home</Link>
 
-<div className={`nav-dropdown ${dropdownOpen ? 'active' : ''}`} onClick={toggleDropdown}>
-<span className="nav-item">Offerings</span>
-<div className={`dropdown-content ${dropdownOpen ? 'active' : ''}`}>
+<div className={`nav-dropdown ${dropdownOpen ? 'active' : ''}`}>
+<button
+type="button"
+className="nav-item nav-dropdown-trigger"
+aria-expanded={dropdownOpen}
+aria-controls="offerings-menu"
+onClick={toggleDropdown}
+>
+<span>Offerings</span>
+<span className={`dropdown-arrow ${dropdownOpen ? 'open' : ''}`} aria-hidden="true">▾</span>
+</button>
+<div id="offerings-menu" className={`dropdown-content ${dropdownOpen ? 'active' : ''}`}>
 <Link to="/workshops" onClick={closeMenu}>Workshops & Retreats</Link>
 <Link to="/corporate" onClick={closeMenu}>Corporate Wellness</Link>
 <Link to="/hospitality" onClick={closeMenu}>Hospitality Wellness</Link>
@@ -51,7 +67,7 @@ return(
 
 <button 
   className={`hamburger ${mobileMenuOpen ? 'active' : ''}`}
-  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+  onClick={toggleMobileMenu}
   aria-label="Toggle menu"
 >
 <span></span>
@@ -94,8 +110,8 @@ style={{borderRadius: '12px'}}
 </div>
 <div className="footer-section">
 <h3>Follow Us</h3>
-<p><a href="https://www.instagram.com/amyana.official" target="_blank">Instagram</a></p>
-<p><a href="https://www.linkedin.com/in/amibannu/" target="_blank">LinkedIn</a></p>
+<p><a href="https://www.instagram.com/amyana.official" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+<p><a href="https://www.linkedin.com/in/amibannu/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
 </div>
 </div>
 
@@ -108,7 +124,7 @@ style={{borderRadius: '12px'}}
 
 function FloatingWhatsApp(){
 return(
-<a href="https://wa.me/8448658684" className="whatsapp-float" target="_blank">
+<a href="https://wa.me/8448658684" className="whatsapp-float" target="_blank" rel="noopener noreferrer">
 <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp"/>
 </a>
 )

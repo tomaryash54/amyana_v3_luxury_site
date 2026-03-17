@@ -26,7 +26,7 @@ a{text-decoration:none;color:inherit;}
  align-items:center;
  justify-content:center;
  text-align:center;
- background:url('/images/reiki-bg.jpg.png') center/cover no-repeat;
+ background:url('/images/reiki.jpg') center/cover no-repeat;
  color:white;
  position:relative;
  overflow:hidden;
@@ -149,12 +149,20 @@ a{text-decoration:none;color:inherit;}
  .offerings-grid{
   grid-template-columns:1fr;
   gap:30px;
+    justify-items:center;
+ }
+ .offering-card{
+    width:100%;
+    max-width:420px;
  }
  .offerings-section{
   padding:60px 20px;
  }
  .card-image-wrapper{
   margin-bottom:20px;
+ }
+ .card-content{
+    text-align:center;
  }
  .card-content h3{
   font-size:20px;
@@ -233,8 +241,17 @@ a{text-decoration:none;color:inherit;}
  cursor:pointer;
  z-index:101;
 }
-.nav-dropdown > span{
- display:inline-block;
+.nav-dropdown-trigger{
+ background:none;
+ border:none;
+}
+.dropdown-arrow{
+ font-size:12px;
+ margin-left:8px;
+ transition:transform 0.25s ease;
+}
+.dropdown-arrow.open{
+ transform:rotate(180deg);
 }
 .dropdown-content{
  position:absolute;
@@ -253,16 +270,19 @@ a{text-decoration:none;color:inherit;}
  transform:translateY(-12px);
  transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
  z-index:1000;
+ pointer-events:none;
 }
 .nav-dropdown:hover .dropdown-content{
  opacity:1;
  visibility:visible;
  transform:translateY(0);
+ pointer-events:auto;
 }
 .dropdown-content.active{
  opacity:1;
  visibility:visible;
  transform:translateY(0);
+ pointer-events:auto;
 }
 .dropdown-content a{
  display:block;
@@ -368,11 +388,14 @@ a{text-decoration:none;color:inherit;}
  .nav-dropdown{
   position:relative;
   width:100%;
-  cursor:pointer;
+    cursor:default;
  }
- .nav-dropdown .nav-item{
-  width:100%;
-  display:block;
+ .nav-dropdown-trigger{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    text-align:left;
  }
  .dropdown-content{
   position:relative;
@@ -398,6 +421,7 @@ a{text-decoration:none;color:inherit;}
   visibility:visible;
   max-height:300px;
   overflow-y:auto;
+    pointer-events:auto;
  }
  .dropdown-content a{
   padding:12px 20px 12px 40px;
@@ -441,7 +465,7 @@ footer{background:#ede7de;padding:0;margin-top:60px;}
 ul{list-style-position:inside;color:#666;line-height:1.8;}
 ul li{margin:8px 0;}
 h4{color:#6e5c4b;margin-top:20px;font-weight:500;font-size:16px;letter-spacing:0.5px;}
-.sound-page{background:url('/images/reiki-bg.jpg.png') center/cover no-repeat;background-color:#ffffff;position:relative;}
+.sound-page{background:url('/images/reiki.jpg') center/cover no-repeat;background-color:#ffffff;position:relative;}
 .sound-page > *{position:relative;z-index:1;}
 .sound-page::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,0.92);z-index:0;}
 .workshops-page{background:url('/images/workshops.jpg') center/cover no-repeat;background-color:#ffffff;position:relative;}
