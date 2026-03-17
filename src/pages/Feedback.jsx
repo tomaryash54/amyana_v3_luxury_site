@@ -1,5 +1,4 @@
-import React, { useMemo } from 'react'
-import { motion } from 'framer-motion'
+import React from 'react'
 
 export default function Feedback() {
   const testimonials = [
@@ -13,36 +12,6 @@ export default function Feedback() {
     { image: '/images/testimonial8.jpg', alt: 'Testimonial 8' },
   ]
 
-  // Generate random rotations for each testimonial
-  const randomRotations = useMemo(() => {
-    return testimonials.map(() => Math.random() * 4 - 2)
-  }, [])
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.08,
-        delayChildren: 0.1,
-      },
-    },
-  }
-
-  const noteVariants = (rotation) => ({
-    hidden: { opacity: 0, y: 30, rotate: -8 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      rotate: rotation,
-      transition: {
-        duration: 0.5,
-        type: 'spring',
-        stiffness: 80,
-      },
-    },
-  })
-
   return (
     <>
       <div className="page-hero feedback-hero">
@@ -54,35 +23,19 @@ export default function Feedback() {
 
       <div className="feedback-container">
         <div className="container">
-          <motion.div
-            className="testimonials-whiteboard-grid"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-          >
+          <div className="testimonials-grid">
             {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                className="whiteboard-note"
-                variants={noteVariants(randomRotations[index])}
-              >
+              <div key={index} className="testimonial-card">
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.alt}
-                  className="whiteboard-image"
+                  className="testimonial-image"
                 />
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
 
-          <motion.div 
-            className="feedback-cta-section"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            viewport={{ once: true }}
-          >
+          <div className="feedback-cta-section">
             <h2>We'd Love to Hear From You</h2>
             <p>Share your healing journey with us</p>
             <button
@@ -91,7 +44,7 @@ export default function Feedback() {
             >
               Give Us Your Feedback
             </button>
-          </motion.div>
+          </div>
         </div>
       </div>
     </>

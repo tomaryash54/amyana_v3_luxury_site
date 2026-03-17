@@ -567,15 +567,15 @@ footer {
 
 .feedback-container {
   background: white;
-  padding: var(--space-12) var(--space-4);
+  padding: var(--space-14) var(--space-4);
 }
 
 .testimonials-whiteboard-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: var(--space-6);
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-8);
   margin-bottom: var(--space-12);
-  max-width: 1000px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -583,19 +583,18 @@ footer {
 .whiteboard-note {
   position: relative;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  aspect-ratio: 4/5;
+  aspect-ratio: 1;
   cursor: pointer;
-  transform-origin: center;
-  transition: all 0.3s ease;
-  border: 2px solid rgba(110, 92, 75, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(110, 92, 75, 0.08);
 }
 
 .whiteboard-note:hover {
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(110, 92, 75, 0.15);
+  transform: translateY(-12px);
 }
 
 .whiteboard-image {
@@ -603,13 +602,48 @@ footer {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.whiteboard-note:hover .whiteboard-image {
+  transform: scale(1.05);
+}
+
+.testimonial-card {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(110, 92, 75, 0.08);
+}
+
+.testimonial-card:hover {
+  box-shadow: 0 16px 40px rgba(110, 92, 75, 0.15);
+  transform: translateY(-12px);
+}
+
+.testimonial-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testimonial-card:hover .testimonial-image {
+  transform: scale(1.05);
 }
 
 .feedback-cta-section {
   text-align: center;
-  padding: var(--space-10) var(--space-4);
-  max-width: 600px;
-  margin: 0 auto;
+  padding: var(--space-12) var(--space-4);
+  max-width: 700px;
+  margin: var(--space-10) auto 0 auto;
+  border-top: 1px solid var(--color-border);
 }
 
 .feedback-cta-section h2 {
@@ -617,12 +651,13 @@ footer {
   margin-bottom: var(--space-4);
   color: var(--color-brand);
   letter-spacing: var(--ls-tight);
+  font-weight: 500;
 }
 
 .feedback-cta-section p {
   font-size: 1.1rem;
   color: var(--color-text-secondary);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-8);
   line-height: 1.6;
 }
 
@@ -691,8 +726,8 @@ footer {
 
 @media (max-width: 768px) {
   .testimonials-whiteboard-grid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: var(--space-4);
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
   }
 
   .feedback-hero {
@@ -706,3 +741,11 @@ footer {
   .feedback-cta-section {
     padding: var(--space-6) var(--space-4);
   }
+}
+
+@media (max-width: 480px) {
+  .testimonials-whiteboard-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
