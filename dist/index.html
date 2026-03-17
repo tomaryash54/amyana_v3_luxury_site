@@ -10,7 +10,7 @@
 body{
  margin:0;
  font-family:'Inter',sans-serif;
- background:#faf8f5;
+ background:#ffffff;
  color:#2c2c2c;
 }
 h1,h2,h3{font-family:'Playfair Display',serif;}
@@ -19,18 +19,47 @@ a{text-decoration:none;color:inherit;}
 .grid{display:grid;gap:30px;}
 .grid-3{grid-template-columns:repeat(3,1fr);}
 .hero{
- height:90vh;
+ height:100vh;
  display:flex;
  align-items:center;
  justify-content:center;
  text-align:center;
- background:url('/images/footer4.jpg') center/cover no-repeat;
+ background:url('/images/reiki-bg.jpg.png') center/cover no-repeat fixed;
  color:white;
+ position:relative;
 }
-.hero h1{font-size:52px;}
-.card img{width:100%;border-radius:10px;}
-.card{transition:transform .3s;}
-.card:hover{transform:translateY(-6px);}
+.hero::before{
+ content:'';
+ position:absolute;
+ top:0;
+ left:0;
+ right:0;
+ bottom:0;
+ background:rgba(0,0,0,0.35);
+}
+.hero > div{
+ position:relative;
+ z-index:2;
+ max-width:600px;
+}
+.hero h1{
+ font-size:68px;
+ font-weight:400;
+ letter-spacing:2px;
+ margin:0 0 20px 0;
+ line-height:1.2;
+}
+.hero p{
+ font-size:18px;
+ font-weight:300;
+ letter-spacing:1px;
+ margin:0;
+ line-height:1.6;
+}
+.card img{width:100%;border-radius:0;}
+.card{transition:transform .3s, opacity .3s;position:relative;overflow:hidden;}
+.card:hover{transform:scale(1.02);opacity:0.9;}
+.card h3{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.6);color:white;margin:0;padding:20px;font-size:20px;font-weight:300;letter-spacing:1px;}
 .nav{
  display:flex;
  justify-content:space-between;
@@ -61,11 +90,11 @@ footer{background:#ede7de;padding:0;margin-top:60px;}
 .footer-section p{color:#666;font-size:14px;margin:8px 0;}
 .footer-section a{color:#6e5c4b;text-decoration:none;font-weight:500;transition:all 0.3s;}
 .footer-section a:hover{text-decoration:underline;}
-.footer-instagram{padding:20px 40px;background:#faf8f5;text-align:center;border-bottom:1px solid rgba(110,92,75,0.1);}
+.footer-instagram{padding:20px 40px;background:#ffffff;text-align:center;border-bottom:1px solid rgba(110,92,75,0.1);}
 .footer-instagram h3{color:#6e5c4b;font-weight:600;margin-bottom:15px;font-size:16px;}
 .instagram-embed-container{width:100%;max-width:400px;margin:0 auto;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.08);}
 .instagram-embed-container iframe{width:100%;border-radius:8px;}
-.footer-copyright{padding:20px 40px;text-align:center;margin:0;color:#666;font-size:14px;background:#ede7de;}
+.footer-copyright{padding:20px 40px;text-align:center;margin:0;color:#666;font-size:14px;background:#ffffff;border-top:1px solid rgba(110,92,75,0.1);}
 .card-link{text-decoration:none;color:inherit;}
 .whatsapp-float{position:fixed;bottom:20px;right:20px;width:60px;height:60px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 8px rgba(0,0,0,0.3);z-index:1000;}
 .whatsapp-float img{width:30px;}
@@ -73,7 +102,7 @@ footer{background:#ede7de;padding:0;margin-top:60px;}
 .card:hover{transform:translateY(-6px); box-shadow:0 8px 16px rgba(0,0,0,0.2);}
 @keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
 .card{animation:fadeIn 0.5s ease-in-out;}
-.page-section{margin:40px 0;padding:30px 20px;background:#f5f1ec;border-radius:10px;animation:fadeIn 0.6s ease-in-out;}
+.page-section{margin:40px 0;padding:30px 20px;background:#ffffff;border-radius:0;animation:fadeIn 0.6s ease-in-out;border-top:1px solid rgba(110,92,75,0.1);border-bottom:1px solid rgba(110,92,75,0.1);}
 .service-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;margin:20px 0;}
 .service-item{padding:20px;background:white;border-left:4px solid #6e5c4b;border-radius:6px;transition:transform 0.3s, box-shadow 0.3s;}
 .service-item:hover{transform:translateX(5px);box-shadow:0 4px 12px rgba(0,0,0,0.1);}
@@ -82,13 +111,13 @@ footer{background:#ede7de;padding:0;margin-top:60px;}
 ul{list-style-position:inside;color:#666;line-height:1.8;}
 ul li{margin:8px 0;}
 h4{color:#6e5c4b;margin-top:20px;}
-.sound-page{background:url('/images/reiki-bg.jpg.png') center/cover fixed;background-color:#faf8f5;position:relative;}
+.sound-page{background:url('/images/reiki-bg.jpg.png') center/cover fixed;background-color:#ffffff;position:relative;}
 .sound-page > *{position:relative;z-index:1;}
-.sound-page::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(250,248,245,0.85);z-index:0;}
-.meet-healer{background:#faf8f5;padding:60px 20px;margin-top:40px;}
+.sound-page::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(255,255,255,0.92);z-index:0;}
+.meet-healer{background:#ffffff;padding:80px 20px;margin-top:40px;}
 .meet-healer-content{max-width:1200px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
-.meet-healer-text h2{font-family:'Playfair Display',serif;font-size:42px;color:#2c2c2c;margin-bottom:20px;}
-.meet-healer-text p{color:#555;line-height:1.8;font-size:16px;margin-bottom:15px;}
+.meet-healer-text h2{font-family:'Playfair Display',serif;font-size:52px;color:#2c2c2c;margin-bottom:30px;font-weight:400;letter-spacing:1px;}
+.meet-healer-text p{color:#555;line-height:1.8;font-size:16px;margin-bottom:15px;font-weight:300;}
 .healer-buttons{display:flex;gap:15px;margin-top:30px;flex-wrap:wrap;}
 .btn-primary,.btn-secondary{padding:14px 28px;border:none;border-radius:6px;font-weight:500;cursor:pointer;transition:all 0.3s;}
 .btn-primary{background:#6e5c4b;color:white;}
@@ -112,8 +141,8 @@ h4{color:#6e5c4b;margin-top:20px;}
 .approach-item p{color:#666;line-height:1.6;margin:10px 0 0 0;}
 .add-on{background:#f0e8e0;}
 .container h1{font-size:48px;font-weight:600;color:#2c2c2c;margin-bottom:40px;letter-spacing:-1px;}
-.container h2{font-size:36px;font-weight:500;color:#2c2c2c;margin-bottom:20px;letter-spacing:-0.5px;position:relative;padding-bottom:15px;}
-.container h2::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;background:#6e5c4b;border-radius:2px;}
+.container h2{font-size:48px;font-weight:300;color:#2c2c2c;margin-bottom:40px;letter-spacing:1px;position:relative;padding-bottom:20px;text-align:center;}
+.container h2::after{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:50px;height:2px;background:#6e5c4b;border-radius:2px;}
 .page-section{margin:50px 0;padding:40px 30px;background:linear-gradient(135deg,rgba(245,241,236,0.6) 0%,rgba(237,231,222,0.4) 100%);border-radius:12px;animation:fadeIn 0.6s ease-in-out;}
 .page-section h2{margin-top:0;}
 .page-section h3{font-size:24px;color:#6e5c4b;margin:25px 0 15px 0;font-weight:500;}
