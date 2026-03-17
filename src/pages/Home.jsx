@@ -148,16 +148,6 @@ return(
 </div>
 </section>
 
-<section className="instagram-widget-section">
-<div className="container">
-<h2>Join Us on Instagram</h2>
-<div className="instagram-widget-embed">
-<iframe src="https://www.lightwidget.com/widgets/e841f0d2d0c050baa9f3a8c6a4f7d2b2.html" scrolling="no" allowtransparency="true" className="lightwidget-frame"></iframe>
-</div>
-<p className="instagram-follow-link">Follow <a href="https://www.instagram.com/amyana.official" target="_blank" rel="noopener noreferrer">@amyana.official</a> for daily wellness insights</p>
-</div>
-</section>
-
 </>
 )
 }
