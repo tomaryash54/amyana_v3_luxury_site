@@ -4,11 +4,16 @@ import { motion, AnimatePresence } from 'framer-motion'
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0)
   
-  // Add your testimonial image paths here
+  // Testimonials array with 8 handwritten testimonial images
   const testimonials = [
-    // { image: '/images/testimonial1.jpg', alt: 'Testimonial 1' },
-    // { image: '/images/testimonial2.jpg', alt: 'Testimonial 2' },
-    // { image: '/images/testimonial3.jpg', alt: 'Testimonial 3' },
+    { image: '/images/testimonial1.jpg', alt: 'Testimonial 1' },
+    { image: '/images/testimonial2.jpg', alt: 'Testimonial 2' },
+    { image: '/images/testimonial3.jpg', alt: 'Testimonial 3' },
+    { image: '/images/testimonial4.jpg', alt: 'Testimonial 4' },
+    { image: '/images/testimonial5.jpg', alt: 'Testimonial 5' },
+    { image: '/images/testimonial6.jpg', alt: 'Testimonial 6' },
+    { image: '/images/testimonial7.jpg', alt: 'Testimonial 7' },
+    { image: '/images/testimonial8.jpg', alt: 'Testimonial 8' },
   ]
 
   useEffect(() => {
