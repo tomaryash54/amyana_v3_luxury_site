@@ -12,10 +12,11 @@ return(
 </RevealOnScroll>
 </div>
 
-<div className="container offerings-section">
+<section className="section">
+<div className="container">
 <h2>Offerings</h2>
 
-<RevealOnScroll stagger={true} className="offerings-wrapper">
+<RevealOnScroll stagger={true} className="grid grid--cols-3 grid--gap-lg mt-10">
 <div className="offerings-grid">
 
 <Link to="/workshops" className="offering-card">
@@ -82,6 +83,7 @@ return(
 </RevealOnScroll>
 
 </div>
+</section>
 
 <section className="how-it-works">
 <div className="container">
@@ -125,6 +127,7 @@ return(
 </section>
 
 <section className="meet-healer">
+<div className="container">
 <div className="meet-healer-content">
 <div className="meet-healer-text">
 <h2>Meet the Healer</h2>
@@ -136,7 +139,7 @@ return(
 
 <p>Through AMYANA, she invites others to pause, listen, and return to their natural rhythm.</p>
 
-<div className="healer-buttons">
+<div className="healer-buttons flex flex--gap-4 mt-8">
 <Link to="/our-story" className="btn-primary">KNOW OUR STORY</Link>
 <a href="https://wa.me/8448658684" target="_blank" rel="noopener noreferrer" className="btn-secondary">BOOK A CONSULTATION</a>
 </div>
@@ -144,6 +147,7 @@ return(
 
 <div className="meet-healer-image">
 <img src="/images/footer1.jpg" alt="Amy - Sound and Reiki Healer"/>
+</div>
 </div>
 </div>
 </section>
