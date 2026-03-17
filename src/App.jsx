@@ -1,5 +1,5 @@
 
-import {BrowserRouter,Routes,Route,Link} from "react-router-dom"
+import {BrowserRouter,Routes,Route,Link,useLocation} from "react-router-dom"
 import {useState, Suspense, lazy, useEffect} from "react"
 import { initAnalytics, trackEvent } from "./utils/analytics"
 
@@ -140,6 +140,16 @@ return(
 )
 }
 
+function ScrollToTop(){
+const { pathname } = useLocation()
+
+useEffect(() => {
+  window.scrollTo({ top: 0, left: 0, behavior: "auto" })
+}, [pathname])
+
+return null
+}
+
 export default function App(){
 useEffect(() => {
   initAnalytics()
@@ -189,6 +199,7 @@ useEffect(() => {
 
 return(
 <BrowserRouter>
+<ScrollToTop/>
 <Nav/>
 <Suspense fallback={<div className="container" style={{padding: '40px 20px'}}>Loading...</div>}>
 <Routes>
