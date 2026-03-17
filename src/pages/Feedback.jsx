@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { motion } from 'framer-motion'
 
 export default function Feedback() {
@@ -13,36 +13,41 @@ export default function Feedback() {
     { image: '/images/testimonial8.jpg', alt: 'Testimonial 8' },
   ]
 
+  // Generate random rotations for each testimonial
+  const randomRotations = useMemo(() => {
+    return testimonials.map(() => Math.random() * 4 - 2)
+  }, [])
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
+        staggerChildren: 0.08,
+        delayChildren: 0.1,
       },
     },
   }
 
-  const noteVariants = {
-    hidden: { opacity: 0, y: 20, rotate: -5 },
+  const noteVariants = (rotation) => ({
+    hidden: { opacity: 0, y: 30, rotate: -8 },
     visible: {
       opacity: 1,
       y: 0,
-      rotate: () => Math.random() * 4 - 2,
+      rotate: rotation,
       transition: {
-        duration: 0.6,
+        duration: 0.5,
         type: 'spring',
-        stiffness: 100,
+        stiffness: 80,
       },
     },
-  }
+  })
 
   return (
     <>
       <div className="page-hero feedback-hero">
         <div>
-          <h1>Client Testimonials</h1>
+          <h1>Feedback</h1>
           <p>Stories of Transformation and Healing</p>
         </div>
       </div>
@@ -60,7 +65,7 @@ export default function Feedback() {
               <motion.div
                 key={index}
                 className="whiteboard-note"
-                variants={noteVariants}
+                variants={noteVariants(randomRotations[index])}
               >
                 <img 
                   src={testimonial.image} 

@@ -38,7 +38,7 @@ return(
   <Link to="/reiki" className="nav-item" onClick={closeMenu}>Reiki</Link>
   <Link to="/our-story" className="nav-item" onClick={closeMenu}>Our Story</Link>
 <Link to="/gift" className="nav-item" onClick={closeMenu}>Gift Cards</Link>
-<Link to="/feedback" className="nav-item" onClick={closeMenu}>Testimonials</Link>
+<Link to="/feedback" className="nav-item" onClick={closeMenu}>Feedback</Link>
 </div>
 
 <button 
