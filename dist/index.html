@@ -62,6 +62,98 @@ a{text-decoration:none;color:inherit;}
  text-shadow:0 1px 10px rgba(0,0,0,0.2);
  opacity:0.95;
 }
+.offerings-section{
+ padding:80px 20px;
+}
+.offerings-grid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:40px;
+ margin-top:60px;
+}
+.offering-card{
+ display:flex;
+ flex-direction:column;
+ text-decoration:none;
+ color:inherit;
+ cursor:pointer;
+ transition:all 0.3s ease;
+ height:100%;
+}
+.card-image-wrapper{
+ position:relative;
+ width:100%;
+ aspect-ratio:1;
+ overflow:hidden;
+ background:#f5f1ec;
+ margin-bottom:24px;
+}
+.card-image-wrapper img{
+ width:100%;
+ height:100%;
+ object-fit:cover;
+ transition:transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+ display:block;
+}
+.card-overlay{
+ position:absolute;
+ top:0;
+ left:0;
+ right:0;
+ bottom:0;
+ background:linear-gradient(135deg,rgba(110,92,75,0.3) 0%,rgba(110,92,75,0.1) 100%);
+ opacity:0;
+ transition:opacity 0.5s ease;
+ z-index:1;
+}
+.offering-card:hover .card-image-wrapper img{
+ transform:scale(1.08);
+}
+.offering-card:hover .card-overlay{
+ opacity:1;
+}
+.offering-card:hover{
+ transform:translateY(-8px);
+}
+.card-content{
+ flex:1;
+ display:flex;
+ flex-direction:column;
+ justify-content:flex-start;
+}
+.card-content h3{
+ font-size:22px;
+ font-weight:500;
+ color:#2c2c2c;
+ margin:0;
+ letter-spacing:0.5px;
+ line-height:1.4;
+ transition:color 0.3s ease;
+}
+.offering-card:hover .card-content h3{
+ color:#6e5c4b;
+}
+@media(max-width:1024px){
+ .offerings-grid{
+  grid-template-columns:repeat(2,1fr);
+  gap:35px;
+ }
+}
+@media(max-width:768px){
+ .offerings-grid{
+  grid-template-columns:1fr;
+  gap:30px;
+ }
+ .offerings-section{
+  padding:60px 20px;
+ }
+ .card-image-wrapper{
+  margin-bottom:20px;
+ }
+ .card-content h3{
+  font-size:20px;
+ }
+}
 .card img{width:100%;border-radius:0;}
 .card{transition:transform .3s, opacity .3s;position:relative;overflow:hidden;}
 .card:hover{transform:scale(1.02);opacity:0.9;}
@@ -441,7 +533,7 @@ h4{color:#6e5c4b;margin-top:20px;font-weight:500;font-size:16px;letter-spacing:0
 @media(max-width:1024px){.gift-cards-grid{grid-template-columns:repeat(2,1fr);gap:30px;}.grid-container{grid-template-columns:repeat(2,1fr);gap:10px;}}
 @media(max-width:768px){.flip-card{height:350px;}.gift-cards-grid{grid-template-columns:1fr;}.gift-intro h1{font-size:32px;}.flip-card-back{padding:20px;font-size:12px;}.flip-card-back h4{font-size:12px;}.footer-top{flex-direction:column;padding:30px;}.footer-section{min-width:100%;padding:20px 0;border-bottom:1px solid rgba(110,92,75,0.1);}.footer-instagram{padding:20px;}.grid-container{grid-template-columns:repeat(2,1fr);gap:8px;}}
 </style>
-  <script type="module" crossorigin src="/assets/index-CI954C-P.js"></script>
+  <script type="module" crossorigin src="/assets/index-CLEObMrE.js"></script>
 </head>
 <body>
 <div id="root"></div>

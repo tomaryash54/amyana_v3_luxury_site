@@ -38,49 +38,67 @@ return(
 </motion.div>
 </div>
 
-<div className="container">
+<div className="container offerings-section">
 <h2>Offerings</h2>
 
-<div className="grid grid-3">
+<div className="offerings-grid">
 
-<Link to="/workshops" className="card-link">
-<div className="card">
-<img src="/images/workshops.jpg"/>
+<Link to="/workshops" className="offering-card">
+<div className="card-image-wrapper">
+<img src="/images/workshops.jpg" alt="Workshops & Retreats"/>
+<div className="card-overlay"></div>
+</div>
+<div className="card-content">
 <h3>Workshops & Retreats</h3>
 </div>
 </Link>
 
-<Link to="/corporate" className="card-link">
-<div className="card">
-<img src="/images/corporate.jpg"/>
+<Link to="/corporate" className="offering-card">
+<div className="card-image-wrapper">
+<img src="/images/corporate.jpg" alt="Corporate Wellness"/>
+<div className="card-overlay"></div>
+</div>
+<div className="card-content">
 <h3>Corporate Wellness</h3>
 </div>
 </Link>
 
-<Link to="/hospitality" className="card-link">
-<div className="card">
-<img src="/images/hospitality.jpg"/>
+<Link to="/hospitality" className="offering-card">
+<div className="card-image-wrapper">
+<img src="/images/hospitality.jpg" alt="Hospitality Wellness"/>
+<div className="card-overlay"></div>
+</div>
+<div className="card-content">
 <h3>Hospitality Wellness</h3>
 </div>
 </Link>
 
-<Link to="/sound" className="card-link">
-<div className="card">
-<img src="/images/private.jpg"/>
+<Link to="/sound" className="offering-card">
+<div className="card-image-wrapper">
+<img src="/images/private.jpg" alt="Private Sound Baths"/>
+<div className="card-overlay"></div>
+</div>
+<div className="card-content">
 <h3>Private Sound Baths</h3>
 </div>
 </Link>
 
-<Link to="/journal" className="card-link">
-<div className="card">
-<img src="/images/journal.jpg"/>
+<Link to="/journal" className="offering-card">
+<div className="card-image-wrapper">
+<img src="/images/journal.jpg" alt="Personal Healing"/>
+<div className="card-overlay"></div>
+</div>
+<div className="card-content">
 <h3>Personal Healing</h3>
 </div>
 </Link>
 
-<Link to="/reiki" className="card-link">
-<div className="card">
-<img src="/images/reiki.jpg"/>
+<Link to="/reiki" className="offering-card">
+<div className="card-image-wrapper">
+<img src="/images/reiki.jpg" alt="Reiki Healing"/>
+<div className="card-overlay"></div>
+</div>
+<div className="card-content">
 <h3>Reiki Healing</h3>
 </div>
 </Link>
