@@ -260,3 +260,242 @@ a:hover {
     font-size: clamp(2rem, 5vw, 2.5rem);
   }
 }
+
+/* Premium Footer Section */
+.footer-premium-section {
+  background: linear-gradient(135deg, var(--color-background-secondary) 0%, var(--color-background-tertiary) 100%);
+  padding: var(--space-12) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-premium-section h2 {
+  text-align: center;
+  margin-bottom: var(--space-10);
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  letter-spacing: var(--ls-tight);
+}
+
+.premium-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-10);
+  align-items: start;
+}
+
+/* Testimonials Wrapper */
+.testimonials-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.testimonials-wrapper h3 {
+  font-size: var(--h3-size);
+  margin: 0 0 var(--space-4) 0;
+  color: var(--color-brand);
+  letter-spacing: var(--ls-normal);
+}
+
+/* Testimonials Container */
+.testimonials-container {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 3/4;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  background: white;
+}
+
+.testimonials-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.testimonial-slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.testimonial-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.testimonial-dots {
+  position: absolute;
+  bottom: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--space-2);
+  z-index: 10;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dot.active {
+  background-color: white;
+  width: 30px;
+  border-radius: 5px;
+}
+
+/* Instagram Wrapper */
+.instagram-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  justify-content: center;
+}
+
+.instagram-wrapper h3 {
+  font-size: var(--h3-size);
+  margin: 0 0 var(--space-4) 0;
+  color: var(--color-brand);
+  letter-spacing: var(--ls-normal);
+}
+
+.instagram-embed {
+  width: 100%;
+  max-width: 500px;
+}
+
+.instagram-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-8);
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  aspect-ratio: 1;
+  justify-content: flex-start;
+  padding-top: var(--space-12);
+}
+
+.instagram-cta:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-brand);
+}
+
+.instagram-icon {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.instagram-cta p {
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.instagram-cta p:first-of-type {
+  font-size: var(--h3-size);
+  font-weight: 600;
+  color: var(--color-brand);
+}
+
+.instagram-handle {
+  font-size: var(--body-size);
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background-color: var(--color-background);
+  padding: var(--space-8) 0;
+  border-top: 1px solid var(--color-border);
+}
+
+footer {
+  background-color: white;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.footer-section h3 {
+  font-size: var(--h4-size);
+  margin-bottom: var(--space-4);
+  color: var(--color-brand);
+}
+
+.footer-section p {
+  margin-bottom: var(--space-2);
+  color: var(--color-text-secondary);
+}
+
+.footer-section a {
+  color: var(--color-brand);
+  transition: opacity 0.2s ease;
+}
+
+.footer-section a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+.footer-copyright {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--small-size);
+  margin: 0;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .premium-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .testimonials-container {
+    max-width: 100%;
+    aspect-ratio: 3/4;
+  }
+
+  .instagram-embed {
+    max-width: 100%;
+  }
+
+  .instagram-cta {
+    max-width: 100%;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+}

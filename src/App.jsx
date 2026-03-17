@@ -9,6 +9,7 @@ import Workshops from "./pages/Workshops"
 import Corporate from "./pages/Corporate"
 import Hospitality from "./pages/Hospitality"
 import OurStory from "./pages/OurStory"
+import Testimonials from "./components/Testimonials"
 
 function Nav(){
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -55,6 +56,31 @@ return(
 function Footer(){
 return(
 <footer>
+<div className="footer-premium-section">
+<div className="container">
+<h2>Voices of Transformation</h2>
+<div className="premium-content">
+<div className="testimonials-wrapper">
+<h3>What Our Clients Say</h3>
+<Testimonials />
+</div>
+
+<div className="instagram-wrapper">
+<h3>Follow Our Journey</h3>
+<div className="instagram-embed">
+<a href="https://www.instagram.com/amyana.official" target="_blank" rel="noopener noreferrer" className="instagram-cta">
+<img src="https://img.icons8.com/color/96/000000/instagram-new.png" alt="Instagram" className="instagram-icon"/>
+<p>Join us on Instagram</p>
+<p className="instagram-handle">@amyana.official</p>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div className="footer-bottom">
+<div className="container">
 <div className="footer-top">
 <div className="footer-section">
 <h3>Contact Us</h3>
@@ -69,6 +95,8 @@ return(
 </div>
 
 <p className="footer-copyright">© AMYANA Wellness</p>
+</div>
+</div>
 </footer>
 )
 }
