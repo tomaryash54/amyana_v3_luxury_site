@@ -278,8 +278,9 @@ a:hover {
 .premium-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-10);
-  align-items: start;
+  gap: var(--space-12);
+  align-items: center;
+  justify-items: center;
 }
 
 /* Testimonials Wrapper */
@@ -299,12 +300,13 @@ a:hover {
 /* Testimonials Container */
 .testimonials-container {
   width: 100%;
-  max-width: 280px;
-  aspect-ratio: 4/5;
-  border-radius: 12px;
+  max-width: 200px;
+  aspect-ratio: 3/4;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.15);
   background: white;
+  margin: 0 auto;
 }
 
 .testimonials-inner {
@@ -330,32 +332,32 @@ a:hover {
 
 .testimonial-dots {
   position: absolute;
-  bottom: var(--space-4);
+  bottom: 8px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: var(--space-2);
+  gap: 4px;
   z-index: 10;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.7);
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .dot:hover {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .dot.active {
   background-color: white;
-  width: 30px;
-  border-radius: 5px;
+  width: 20px;
+  border-radius: 3px;
 }
 
 /* Instagram Wrapper */
@@ -375,15 +377,18 @@ a:hover {
 
 .instagram-embed {
   width: 100%;
-  max-width: 280px;
-  height: 350px;
-  overflow: auto;
-  border-radius: 12px;
+  max-width: 200px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 16px;
+  margin: 0 auto;
 }
 
 .instagram-embed iframe {
-  border-radius: 12px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 16px;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.15);
 }
 
 .instagram-cta {
