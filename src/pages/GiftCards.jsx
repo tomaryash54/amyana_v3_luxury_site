@@ -49,9 +49,17 @@ setFlipped({...flipped, [id]: !flipped[id]})
 }
 
 return(
-<div className="container gift-cards-page">
-<section className="gift-intro">
+<>
+<div className="page-hero gift-hero">
+<div>
 <h1>The Gift of Stillness</h1>
+<p>Offer your loved ones a meaningful pause from the noise of everyday life</p>
+</div>
+</div>
+
+<div className="container gift-cards-page gift-page">
+<section className="gift-intro">
+<h2>The Gift of Stillness</h2>
 <p>Offer your loved ones a meaningful pause from the noise of everyday life.</p>
 <p><strong>AMYANA gift cards</strong> are thoughtfully designed experiences that can be redeemed for private sessions, workshops, retreats, or curated healing gatherings.</p>
 <p className="subtext">Each card is delivered digitally and personalised with your message.</p>
@@ -88,5 +96,6 @@ return(
 ))}
 </div>
 </div>
+</>
 )
 }

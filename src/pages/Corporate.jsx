@@ -1,9 +1,15 @@
 export default function Corporate(){
 return(
+<>
+<div className="page-hero corporate-hero">
+<div>
+<h1>Corporate Wellness</h1>
+<p>Nervous System–Led Corporate Wellbeing</p>
+</div>
+</div>
+
 <div className="corporate-page">
 <div className="container">
-<h1>Corporate Wellness</h1>
-
 <section className="page-section">
 <h2>Nervous System–Led Corporate Wellbeing</h2>
 <p>Designed for modern teams navigating high performance and constant stimulation. These experiences restore clarity, emotional steadiness, and collective balance — without overwhelming schedules.</p>
@@ -65,5 +71,6 @@ Blending sound immersion, guided practices, reflective sessions, and intentional
 </section>
 </div>
 </div>
+</>
 )
 }

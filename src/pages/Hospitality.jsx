@@ -1,9 +1,15 @@
 export default function Hospitality(){
 return(
+<>
+<div className="page-hero hospitality-hero">
+<div>
+<h1>Hospitality Wellness</h1>
+<p>Elevated Wellness Experiences for Refined Spaces</p>
+</div>
+</div>
+
 <div className="hospitality-page">
 <div className="container">
-<h1>Hospitality Wellness</h1>
-
 <section className="page-section">
 <h2>Elevated Wellness Experiences for Refined Spaces</h2>
 <p>AMYANA partners with boutique hotels, luxury properties, wellness spaces, and Retreat properties to integrate nervous system–led experiences into the guest journey - seamlessly, discreetly, and intentionally.</p>
@@ -67,5 +73,6 @@ return(
 </section>
 </div>
 </div>
+</>
 )
 }

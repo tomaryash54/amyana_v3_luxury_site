@@ -1,9 +1,15 @@
 
 export default function Reiki(){
 return(
-<div className="container reiki-page">
+<>
+<div className="page-hero reiki-hero">
+<div>
 <h1>Reiki Healing</h1>
+<p>Subtle Energy. Intentional Alignment.</p>
+</div>
+</div>
 
+<div className="container reiki-page">
 <section className="page-section hero-section">
 <h2>Subtle Energy. Intentional Alignment.</h2>
 <p>A restorative practice rooted in conscious touch and energetic awareness. Reiki supports emotional balance, clarity, and gentle nervous system regulation — both in-person and at a distance.</p>
@@ -52,5 +58,6 @@ return(
 <p className="closing-text">Healing through Reiki is gentle, non-invasive, and deeply personal — unfolding at a pace your system can hold.</p>
 </section>
 </div>
+</>
 )
 }

@@ -12,28 +12,31 @@ import OurStory from "./pages/OurStory"
 
 function Nav(){
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-const [mobileOfferings, setMobileOfferings] = useState(false)
+
+const closeMenu = () => {
+  setMobileMenuOpen(false)
+}
 
 return(
 <nav className="nav">
-<Link to="/" className="nav-logo">AMYANA</Link>
+<Link to="/" className="nav-logo" onClick={closeMenu}>AMYANA</Link>
 
 <div className={`nav-menu ${mobileMenuOpen ? 'active' : ''}`}>
-<Link to="/" className="nav-item">Home</Link>
+<Link to="/" className="nav-item" onClick={closeMenu}>Home</Link>
 
 <div className="nav-dropdown">
 <span className="nav-item">Offerings</span>
 <div className="dropdown-content">
-<Link to="/workshops">Workshops & Retreats</Link>
-<Link to="/corporate">Corporate Wellness</Link>
-<Link to="/hospitality">Hospitality Wellness</Link>
-<Link to="/sound">Sound Baths</Link>
+<Link to="/workshops" onClick={closeMenu}>Workshops & Retreats</Link>
+<Link to="/corporate" onClick={closeMenu}>Corporate Wellness</Link>
+<Link to="/hospitality" onClick={closeMenu}>Hospitality Wellness</Link>
+<Link to="/sound" onClick={closeMenu}>Sound Baths</Link>
 </div>
 </div>
 
-  <Link to="/reiki" className="nav-item">Reiki</Link>
-  <Link to="/our-story" className="nav-item">Our Story</Link>
-<Link to="/gift" className="nav-item">Gift Cards</Link>
+  <Link to="/reiki" className="nav-item" onClick={closeMenu}>Reiki</Link>
+  <Link to="/our-story" className="nav-item" onClick={closeMenu}>Our Story</Link>
+<Link to="/gift" className="nav-item" onClick={closeMenu}>Gift Cards</Link>
 </div>
 
 <button 

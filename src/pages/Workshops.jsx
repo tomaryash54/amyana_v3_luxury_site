@@ -1,9 +1,15 @@
 export default function Workshops(){
 return(
+<>
+<div className="page-hero workshops-hero">
+<div>
+<h1>Workshops & Retreats</h1>
+<p>Immersive Collective Experiences</p>
+</div>
+</div>
+
 <div className="workshops-page">
 <div className="container">
-<h1>Workshops & Retreats</h1>
-
 <section className="page-section">
 <h2>Immersive Collective Experiences</h2>
 <p>Curated gatherings designed to restore rhythm, deepen awareness, and reconnect you to stillness. Each offering is intentionally crafted to regulate the nervous system while holding space for reflection and renewal.</p>
@@ -40,5 +46,6 @@ Inspired by lunar cycles, this experience guides you through gentle Moon Salutat
 </section>
 </div>
 </div>
+</>
 )
 }

@@ -1,9 +1,15 @@
 
 export default function Sound(){
 return(
-<div className="container sound-page">
+<>
+<div className="page-hero sound-hero">
+<div>
 <h1>Sound Healing</h1>
+<p>Private Sound Baths</p>
+</div>
+</div>
 
+<div className="container sound-page">
 <section className="page-section">
 <h2>Private Sound Baths</h2>
 <h3>Personalised Sound Immersion</h3>
@@ -85,5 +91,6 @@ return(
 </div>
 </section>
 </div>
+</>
 )
 }
