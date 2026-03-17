@@ -13,7 +13,7 @@ export default function Feedback() {
   ]
 
   return (
-    <>
+    <div className="feedback-page">
       <div className="page-hero feedback-hero">
         <div>
           <h1>Feedback</h1>
@@ -21,32 +21,32 @@ export default function Feedback() {
         </div>
       </div>
 
-      <div className="feedback-container">
-        <div className="container">
-          <div className="testimonials-grid">
+      <div className="feedback-main">
+        <div className="feedback-grid-wrapper">
+          <div className="feedback-grid">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="testimonial-card">
+              <div key={index} className="feedback-item">
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.alt}
-                  className="testimonial-image"
+                  className="feedback-img"
                 />
               </div>
             ))}
           </div>
+        </div>
 
-          <div className="feedback-cta-section">
-            <h2>We'd Love to Hear From You</h2>
-            <p>Share your healing journey with us</p>
-            <button
-              onClick={() => window.open('https://wa.me/8448658684?text=Hi%20Amy%2C%20I%20would%20like%20to%20share%20my%20feedback%20about%20my%20experience%20with%20Amyana.', '_blank')}
-              className="btn-primary"
-            >
-              Give Us Your Feedback
-            </button>
-          </div>
+        <div className="feedback-cta">
+          <h2>We'd Love to Hear From You</h2>
+          <p>Share your healing journey with us</p>
+          <button
+            onClick={() => window.open('https://wa.me/8448658684?text=Hi%20Amy%2C%20I%20would%20like%20to%20share%20my%20feedback%20about%20my%20experience%20with%20Amyana.', '_blank')}
+            className="btn-primary"
+          >
+            Give Us Your Feedback
+          </button>
         </div>
       </div>
-    </>
+    </div>
   )
 }
