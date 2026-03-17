@@ -1,6 +1,7 @@
 
 import {BrowserRouter,Routes,Route,Link} from "react-router-dom"
-import {useState, Suspense, lazy} from "react"
+import {useState, Suspense, lazy, useEffect} from "react"
+import { initAnalytics, trackEvent } from "./utils/analytics"
 
 const Home = lazy(() => import("./pages/Home"))
 const Reiki = lazy(() => import("./pages/Reiki"))
@@ -11,6 +12,15 @@ const Corporate = lazy(() => import("./pages/Corporate"))
 const Hospitality = lazy(() => import("./pages/Hospitality"))
 const OurStory = lazy(() => import("./pages/OurStory"))
 const Feedback = lazy(() => import("./pages/Feedback"))
+
+const OFFERING_ROUTES = {
+  "/workshops": "workshops",
+  "/corporate": "corporate",
+  "/hospitality": "hospitality",
+  "/sound": "sound",
+  "/our-story": "our_story",
+  "/reiki": "reiki",
+}
 
 function Nav(){
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -131,6 +141,52 @@ return(
 }
 
 export default function App(){
+useEffect(() => {
+  initAnalytics()
+
+  const handleDocumentClick = (event) => {
+    const target = event.target
+    if (!(target instanceof Element)) return
+
+    const anchor = target.closest("a[href]")
+    if (!anchor) return
+
+    const href = anchor.getAttribute("href") || ""
+    if (!href) return
+
+    const url = new URL(anchor.href, window.location.origin)
+    const path = url.pathname
+    const ctaText = (anchor.textContent || "").trim() || "link"
+
+    if (anchor.classList.contains("offering-card") && OFFERING_ROUTES[path]) {
+      trackEvent("offering_click", {
+        offering: OFFERING_ROUTES[path],
+        destination_path: path,
+        page_path: window.location.pathname,
+      })
+    }
+
+    if (href.includes("wa.me")) {
+      trackEvent("whatsapp_click", {
+        destination: href,
+        page_path: window.location.pathname,
+        cta_text: ctaText,
+      })
+    }
+
+    if (href.includes("forms.gle")) {
+      trackEvent("consultation_click", {
+        destination: href,
+        page_path: window.location.pathname,
+        cta_text: ctaText,
+      })
+    }
+  }
+
+  document.addEventListener("click", handleDocumentClick)
+  return () => document.removeEventListener("click", handleDocumentClick)
+}, [])
+
 return(
 <BrowserRouter>
 <Nav/>

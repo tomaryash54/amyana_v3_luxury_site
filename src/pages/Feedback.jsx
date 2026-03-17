@@ -1,7 +1,19 @@
 import React from 'react'
 import './Feedback.css'
+import { trackEvent } from '../utils/analytics'
 
 export default function Feedback() {
+  const feedbackWhatsAppUrl = 'https://wa.me/8448658684?text=Hi%20Amy%2C%20I%20would%20like%20to%20share%20my%20feedback%20about%20my%20experience%20with%20Amyana.'
+
+  const handleFeedbackClick = () => {
+    trackEvent('whatsapp_click', {
+      destination: feedbackWhatsAppUrl,
+      page_path: window.location.pathname,
+      cta_text: 'feedback_share_button',
+    })
+    window.open(feedbackWhatsAppUrl, '_blank')
+  }
+
   const testimonials = [
     { image: '/images/testimonial1.jpg', alt: 'Testimonial 1' },
     { image: '/images/testimonial2.jpg', alt: 'Testimonial 2' },
@@ -43,7 +55,7 @@ export default function Feedback() {
           <h2>We'd Love to Hear From You</h2>
           <p>Share your healing journey with us</p>
           <button
-            onClick={() => window.open('https://wa.me/8448658684?text=Hi%20Amy%2C%20I%20would%20like%20to%20share%20my%20feedback%20about%20my%20experience%20with%20Amyana.', '_blank')}
+            onClick={handleFeedbackClick}
             className="btn-primary"
           >
             Give Us Your Feedback
