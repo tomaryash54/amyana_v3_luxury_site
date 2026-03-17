@@ -18,7 +18,7 @@ export default function InstagramFeed() {
       const token = import.meta.env.VITE_INSTAGRAM_ACCESS_TOKEN
       
       if (!token) {
-        setError('Instagram token not configured')
+        setError('TOKEN_NOT_SET')
         setLoading(false)
         return
       }
@@ -28,20 +28,29 @@ export default function InstagramFeed() {
       )
 
       if (!response.ok) {
-        throw new Error('Failed to fetch Instagram posts')
+        const errorData = await response.json()
+        console.error('Instagram API error:', errorData)
+        throw new Error(errorData.error?.message || 'Failed to fetch Instagram posts')
       }
 
       const data = await response.json()
+      
+      if (!data.data || data.data.length === 0) {
+        setError('NO_POSTS')
+        setLoading(false)
+        return
+      }
+
       const filteredPosts = data.data.filter(post => 
         post.media_type === 'IMAGE' || post.media_type === 'CAROUSEL_ALBUM'
-      ).slice(0, 12) // Limit to 12 posts
+      ).slice(0, 12)
 
       setPosts(filteredPosts)
       setError(null)
     } catch (err) {
       console.error('Instagram fetch error:', err)
-      setError('Unable to load Instagram feed')
-      setPosts([]) // Show empty state
+      setError('FETCH_ERROR')
+      setPosts([])
     } finally {
       setLoading(false)
     }
@@ -53,7 +62,7 @@ export default function InstagramFeed() {
     const startAutoPlay = () => {
       autoPlayRef.current = setInterval(() => {
         setCurrentIndex(prev => (prev + 1) % posts.length)
-      }, 5000) // Rotate every 5 seconds
+      }, 5000)
     }
 
     startAutoPlay()
@@ -66,7 +75,6 @@ export default function InstagramFeed() {
   const goToSlide = (index) => {
     setCurrentIndex(index)
     if (autoPlayRef.current) clearInterval(autoPlayRef.current)
-    // Restart autoplay
     autoPlayRef.current = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % posts.length)
     }, 5000)
@@ -79,6 +87,27 @@ export default function InstagramFeed() {
       <div className="instagram-feed-container">
         <div className="feed-loading">
           <p>Loading Instagram feed...</p>
+        </div>
+      </div>
+    )
+  }
+
+  // Show setup message if token is not configured
+  if (error === 'TOKEN_NOT_SET') {
+    return (
+      <div className="instagram-feed-container">
+        <div className="feed-setup">
+          <h3>Connect Your Instagram</h3>
+          <p>Follow us for daily wellness insights and healing practices</p>
+          <a 
+            href="https://www.instagram.com/amyana.official" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="btn-primary"
+          >
+            Visit @amyana.official
+          </a>
+          <p className="setup-note">Admin: See INSTAGRAM_SETUP.md to enable the live feed</p>
         </div>
       </div>
     )
@@ -129,7 +158,6 @@ export default function InstagramFeed() {
           )}
         </AnimatePresence>
 
-        {/* Navigation Arrows */}
         <button 
           className="feed-nav feed-nav-prev"
           onClick={() => goToSlide((currentIndex - 1 + posts.length) % posts.length)}
@@ -146,7 +174,6 @@ export default function InstagramFeed() {
         </button>
       </div>
 
-      {/* Thumbnail Indicators */}
       <div className="feed-thumbnails">
         {posts.map((post, index) => (
           <motion.button
@@ -164,7 +191,6 @@ export default function InstagramFeed() {
         ))}
       </div>
 
-      {/* Instagram Link */}
       <div className="feed-footer">
         <a 
           href="https://www.instagram.com/amyana.official" 

@@ -293,10 +293,34 @@ a:hover {
 }
 
 .feed-loading,
-.feed-error {
+.feed-error,
+.feed-setup {
   text-align: center;
   padding: var(--space-12);
   color: var(--color-text-secondary);
+}
+
+.feed-setup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.feed-setup h3 {
+  margin: 0 0 var(--space-2) 0;
+  color: var(--color-text-primary);
+}
+
+.feed-setup p {
+  margin: 0;
+}
+
+.setup-note {
+  font-size: var(--small-size);
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-top: var(--space-4);
 }
 
 .feed-error {
