@@ -609,6 +609,16 @@ footer {
   transform: scale(1.05);
 }
 
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .testimonial-card {
   position: relative;
   background: white;
@@ -730,6 +740,11 @@ footer {
     gap: var(--space-5);
   }
 
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
+  }
+
   .feedback-hero {
     padding: 60px 20px;
   }
@@ -745,6 +760,11 @@ footer {
 
 @media (max-width: 480px) {
   .testimonials-whiteboard-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .testimonials-grid {
     grid-template-columns: 1fr;
     gap: var(--space-4);
   }
