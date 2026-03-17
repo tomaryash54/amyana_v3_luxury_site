@@ -303,7 +303,7 @@ a:hover {
 .testimonials-carousel-container {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: 8px;
   align-items: center;
   width: 100%;
 }
@@ -312,24 +312,24 @@ a:hover {
 .testimonials-grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 8px;
   width: 100%;
-  max-width: 320px;
+  max-width: 210px;
   margin: 0 auto;
 }
 
 .testimonial-grid-item {
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  aspect-ratio: 3/4;
+  aspect-ratio: 2/3;
 }
 
 .testimonial-grid-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .testimonial-grid-image {
@@ -342,14 +342,14 @@ a:hover {
 /* Testimonials Navigation Dots */
 .testimonials-nav-dots {
   display: flex;
-  gap: 6px;
+  gap: 4px;
   justify-content: center;
-  margin-top: var(--space-3);
+  margin-top: 4px;
 }
 
 .nav-dot {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background-color: rgba(110, 92, 75, 0.4);
   border: none;
@@ -363,8 +363,8 @@ a:hover {
 
 .nav-dot.active {
   background-color: var(--color-brand);
-  width: 24px;
-  border-radius: 4px;
+  width: 18px;
+  border-radius: 3px;
 }
 
 /* Instagram Wrapper */
