@@ -1,46 +1,21 @@
-
 import {Link} from "react-router-dom"
-import {motion} from "framer-motion"
+import RevealOnScroll, { fadeUpVariants } from "../components/RevealOnScroll"
 
 export default function Home(){
-const containerVariants = {
-  hidden: {opacity: 0},
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-      delayChildren: 0.2,
-    }
-  }
-}
-
-const itemVariants = {
-  hidden: {opacity: 0, y: 20},
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {duration: 0.8, ease: "easeOut"}
-  }
-}
-
 return(
 <>
 <div className="hero">
 <div className="hero-overlay"></div>
-<motion.div 
-  className="hero-content"
-  variants={containerVariants}
-  initial="hidden"
-  animate="visible"
->
-<motion.h1 variants={itemVariants}>Healing is a return, not a performance</motion.h1>
-<motion.p variants={itemVariants}>AMYANA is a refined holistic healing space devoted to emotional balance and deep restoration.</motion.p>
-</motion.div>
+<RevealOnScroll className="hero-content">
+<h1>Healing is a return, not a performance</h1>
+<p>AMYANA is a refined holistic healing space devoted to emotional balance and deep restoration.</p>
+</RevealOnScroll>
 </div>
 
 <div className="container offerings-section">
 <h2>Offerings</h2>
 
+<RevealOnScroll stagger={true} className="offerings-wrapper">
 <div className="offerings-grid">
 
 <Link to="/workshops" className="offering-card">
@@ -104,12 +79,15 @@ return(
 </Link>
 
 </div>
+</RevealOnScroll>
+
 </div>
 
 <section className="how-it-works">
 <div className="container">
 <h2>How it Works</h2>
 
+<RevealOnScroll stagger={true}>
 <div className="steps-container">
 <div className="step">
 <div className="step-number">1</div>
@@ -141,6 +119,8 @@ return(
 <p>Carry the healing forward with guidance on practices and rituals that support sustained nervous system regulation and inner stillness.</p>
 </div>
 </div>
+</RevealOnScroll>
+
 </div>
 </section>
 
