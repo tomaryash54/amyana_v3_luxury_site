@@ -608,6 +608,56 @@ h4{color:#6e5c4b;margin-top:20px;font-weight:500;font-size:16px;letter-spacing:0
 .flip-card-back .btn-primary{align-self:center;margin-top:auto;padding:12px 24px;font-size:13px;}
 @media(max-width:1024px){.gift-cards-grid{grid-template-columns:repeat(2,1fr);gap:30px;}.grid-container{grid-template-columns:repeat(2,1fr);gap:10px;}}
 @media(max-width:768px){.flip-card{height:350px;}.gift-cards-grid{grid-template-columns:1fr;}.gift-intro h1{font-size:32px;}.flip-card-back{padding:20px;font-size:12px;}.flip-card-back h4{font-size:12px;}.footer-top{flex-direction:column;padding:30px;}.footer-section{min-width:100%;padding:20px 0;border-bottom:1px solid rgba(110,92,75,0.1);}.footer-instagram{padding:20px;}.grid-container{grid-template-columns:repeat(2,1fr);gap:8px;}}
+
+/* Premium visual-only overrides for service pages */
+@keyframes premiumFadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+@keyframes premiumShimmer{from{transform:translateX(-130%);}to{transform:translateX(130%);}}
+.page-hero{position:relative;min-height:46vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 20px;margin-bottom:10px;overflow:hidden;color:#fff;background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed;}
+.page-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(145deg,rgba(10,10,10,0.52) 0%,rgba(10,10,10,0.28) 42%,rgba(110,92,75,0.38) 100%);z-index:1;}
+.page-hero > div{position:relative;z-index:2;max-width:780px;padding:12px 18px;animation:premiumFadeUp .9s cubic-bezier(0.16,1,0.3,1) both;}
+.page-hero h1{margin:0 0 14px 0;font-size:clamp(2.4rem,5.6vw,4.3rem);font-family:'Dancing Script',cursive;font-weight:500;letter-spacing:.7px;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,0.32);}
+.page-hero p{margin:0;font-size:clamp(1rem,2.1vw,1.28rem);line-height:1.7;letter-spacing:.35px;color:rgba(255,255,255,.94);text-shadow:0 2px 14px rgba(0,0,0,0.28);}
+.sound-hero{background-image:url('/images/reiki.jpg');}
+.reiki-hero{background-image:url('/images/reiki-healer.jpg.png');}
+.workshops-hero{background-image:url('/images/workshops.jpg');}
+.corporate-hero{background-image:url('/images/corporate.jpg');}
+.hospitality-hero{background-image:url('/images/hospitality.jpg');}
+.gift-hero{background-image:url('/images/gift.jpg');}
+
+.page-section{position:relative;margin:56px 0;padding:44px 34px;border-radius:20px;border:1px solid rgba(110,92,75,0.18);background:linear-gradient(145deg,rgba(255,255,255,.96) 0%,rgba(245,241,236,.8) 100%);box-shadow:0 18px 44px rgba(54,44,34,.08);transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;animation:premiumFadeUp .72s cubic-bezier(0.16,1,0.3,1) both;}
+.page-section:hover{transform:translateY(-5px);box-shadow:0 24px 52px rgba(54,44,34,.12);border-color:rgba(110,92,75,0.28);}
+.page-section h2{font-size:clamp(2rem,4vw,3.1rem);margin-bottom:26px;}
+.page-section h3{font-size:clamp(1.3rem,2.2vw,1.75rem);margin-bottom:12px;}
+.page-section p,.page-section li{font-size:15px;line-height:1.85;color:#555;}
+
+.service-item,.experience-card,.approach-item,.support-item,.value-item{position:relative;overflow:hidden;border-radius:16px;border:1px solid rgba(110,92,75,0.16);background:linear-gradient(155deg,rgba(255,255,255,.95) 0%,rgba(245,241,236,.65) 100%);box-shadow:0 10px 28px rgba(54,44,34,.08);transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;animation:premiumFadeUp .7s cubic-bezier(0.16,1,0.3,1) both;}
+.service-item::after,.experience-card::after,.approach-item::after,.support-item::after,.value-item::after{content:'';position:absolute;inset:auto -35% -55% -35%;height:150px;background:radial-gradient(circle at center,rgba(255,255,255,.55) 0%,rgba(255,255,255,0) 70%);pointer-events:none;}
+.service-item:hover,.experience-card:hover,.approach-item:hover,.support-item:hover,.value-item:hover{transform:translateY(-8px);border-color:rgba(110,92,75,0.28);box-shadow:0 18px 40px rgba(54,44,34,.14);}
+.service-item h3,.experience-card h3,.approach-item h4,.support-item h4,.value-item h3{color:#5f4d3d;}
+
+.btn-primary{position:relative;display:inline-flex;align-items:center;justify-content:center;overflow:hidden;padding:15px 32px;border-radius:999px;border:1px solid rgba(255,255,255,.2);background:linear-gradient(135deg,#6e5c4b 0%,#4f3f31 100%);box-shadow:0 10px 25px rgba(78,61,46,.28);font-weight:600;letter-spacing:.4px;transition:transform .3s ease,box-shadow .3s ease,filter .3s ease;}
+.btn-primary::before{content:'';position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,0) 10%,rgba(255,255,255,.32) 50%,rgba(255,255,255,0) 90%);transform:translateX(-130%);}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(78,61,46,.34);filter:saturate(1.05);}
+.btn-primary:hover::before{animation:premiumShimmer .9s ease;}
+
+.featured-workshop,.coming-soon,.hero-section,.add-on{border-radius:18px;border:1px solid rgba(110,92,75,0.2);box-shadow:0 12px 30px rgba(54,44,34,.1);}
+
+.page-section:nth-of-type(1),.service-list > :nth-child(1),.support-grid > :nth-child(1),.approach-grid > :nth-child(1),.values-grid > :nth-child(1){animation-delay:.06s;}
+.page-section:nth-of-type(2),.service-list > :nth-child(2),.support-grid > :nth-child(2),.approach-grid > :nth-child(2),.values-grid > :nth-child(2){animation-delay:.12s;}
+.page-section:nth-of-type(3),.service-list > :nth-child(3),.support-grid > :nth-child(3),.approach-grid > :nth-child(3),.values-grid > :nth-child(3){animation-delay:.18s;}
+.page-section:nth-of-type(4),.service-list > :nth-child(4),.support-grid > :nth-child(4),.approach-grid > :nth-child(4),.values-grid > :nth-child(4){animation-delay:.24s;}
+
+@media(max-width:900px){
+ .page-hero{min-height:38vh;background-attachment:scroll;padding:64px 18px;}
+ .page-section{margin:38px 0;padding:30px 22px;border-radius:16px;}
+}
+@media(max-width:680px){
+ .page-hero h1{font-size:clamp(2.05rem,10vw,2.9rem);}
+ .page-hero p{font-size:clamp(.95rem,4vw,1.06rem);}
+ .page-section{margin:30px 0;padding:24px 18px;}
+ .service-item,.experience-card,.approach-item,.support-item,.value-item{border-radius:14px;}
+ .btn-primary{width:100%;max-width:320px;}
+}
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important;}}
 </style>
 </head>
