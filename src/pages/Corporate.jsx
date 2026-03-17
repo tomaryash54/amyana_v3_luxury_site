@@ -1,5 +1,6 @@
 export default function Corporate(){
 return(
+<div className="corporate-page">
 <div className="container">
 <h1>Corporate Wellness</h1>
 
@@ -62,6 +63,7 @@ Blending sound immersion, guided practices, reflective sessions, and intentional
 <h3>Curated Departing Gifts</h3>
 <p>Thoughtfully designed keepsakes aligned with the retreat or session theme — extending the experience beyond the space.</p>
 </section>
+</div>
 </div>
 )
 }

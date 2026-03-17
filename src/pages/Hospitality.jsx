@@ -1,5 +1,6 @@
 export default function Hospitality(){
 return(
+<div className="hospitality-page">
 <div className="container">
 <h1>Hospitality Wellness</h1>
 
@@ -64,6 +65,7 @@ return(
 </div>
 </div>
 </section>
+</div>
 </div>
 )
 }

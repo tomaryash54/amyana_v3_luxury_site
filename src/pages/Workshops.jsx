@@ -1,5 +1,6 @@
 export default function Workshops(){
 return(
+<div className="workshops-page">
 <div className="container">
 <h1>Workshops & Retreats</h1>
 
@@ -37,6 +38,7 @@ Inspired by lunar cycles, this experience guides you through gentle Moon Salutat
 <p className="coming-soon-text">Coming Soon</p>
 <p>Immersive multi-day experiences designed for deep restoration and renewal.</p>
 </section>
+</div>
 </div>
 )
 }
