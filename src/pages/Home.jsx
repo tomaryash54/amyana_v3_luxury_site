@@ -2,6 +2,17 @@ import {Link} from "react-router-dom"
 import RevealOnScroll, { fadeUpVariants } from "../components/RevealOnScroll"
 
 const OFFERING_IMAGE_VERSION = "20260318"
+const OFFERING_IMAGE_SIZES = "(max-width: 768px) 92vw, (max-width: 1024px) 46vw, 30vw"
+
+const getOfferingImageProps = (name) => ({
+	src: `/images/${name}-640.jpg?v=${OFFERING_IMAGE_VERSION}`,
+	srcSet: [
+		`/images/${name}-640.jpg?v=${OFFERING_IMAGE_VERSION} 640w`,
+		`/images/${name}-960.jpg?v=${OFFERING_IMAGE_VERSION} 960w`,
+		`/images/${name}.jpg?v=${OFFERING_IMAGE_VERSION} 1400w`,
+	].join(", "),
+	sizes: OFFERING_IMAGE_SIZES,
+})
 
 export default function Home(){
 return(
@@ -22,7 +33,7 @@ return(
 
 <Link to="/workshops" className="offering-card">
 <div className="card-image-wrapper">
-<img src={`/images/workshops.jpg?v=${OFFERING_IMAGE_VERSION}`} alt="Workshops & Retreats" loading="lazy" decoding="async"/>
+<img {...getOfferingImageProps("workshops")} alt="Workshops & Retreats" loading="lazy" decoding="async"/>
 <div className="card-overlay"></div>
 </div>
 <div className="card-content">
@@ -32,7 +43,7 @@ return(
 
 <Link to="/corporate" className="offering-card">
 <div className="card-image-wrapper">
-<img src={`/images/corporate.jpg?v=${OFFERING_IMAGE_VERSION}`} alt="Corporate Wellness" loading="lazy" decoding="async"/>
+<img {...getOfferingImageProps("corporate")} alt="Corporate Wellness" loading="lazy" decoding="async"/>
 <div className="card-overlay"></div>
 </div>
 <div className="card-content">
@@ -42,7 +53,7 @@ return(
 
 <Link to="/hospitality" className="offering-card">
 <div className="card-image-wrapper">
-<img src={`/images/hospitality.jpg?v=${OFFERING_IMAGE_VERSION}`} alt="Hospitality Wellness" loading="lazy" decoding="async"/>
+<img {...getOfferingImageProps("hospitality")} alt="Hospitality Wellness" loading="lazy" decoding="async"/>
 <div className="card-overlay"></div>
 </div>
 <div className="card-content">
@@ -52,7 +63,7 @@ return(
 
 <Link to="/sound" className="offering-card">
 <div className="card-image-wrapper">
-<img src={`/images/private.jpg?v=${OFFERING_IMAGE_VERSION}`} alt="Private Sound Baths" loading="lazy" decoding="async"/>
+<img {...getOfferingImageProps("private")} alt="Private Sound Baths" loading="lazy" decoding="async"/>
 <div className="card-overlay"></div>
 </div>
 <div className="card-content">
@@ -62,7 +73,7 @@ return(
 
 <Link to="/our-story" className="offering-card">
 <div className="card-image-wrapper">
-<img src={`/images/journal.jpg?v=${OFFERING_IMAGE_VERSION}`} alt="Personal Healing" loading="lazy" decoding="async"/>
+<img {...getOfferingImageProps("journal")} alt="Personal Healing" loading="lazy" decoding="async"/>
 <div className="card-overlay"></div>
 </div>
 <div className="card-content">
@@ -72,7 +83,7 @@ return(
 
 <Link to="/reiki" className="offering-card">
 <div className="card-image-wrapper">
-<img src={`/images/reiki.jpg?v=${OFFERING_IMAGE_VERSION}`} alt="Reiki Healing" loading="lazy" decoding="async"/>
+<img {...getOfferingImageProps("reiki")} alt="Reiki Healing" loading="lazy" decoding="async"/>
 <div className="card-overlay"></div>
 </div>
 <div className="card-content">
