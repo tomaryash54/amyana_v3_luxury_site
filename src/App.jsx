@@ -58,23 +58,25 @@ allowTransparency="true">
 function Footer(){
 return(
 <footer>
-<div className="footer-content">
-<div>
+<div className="footer-top">
+<div className="footer-section">
 <h3>Contact Us</h3>
 <p>Email: <a href="mailto:amyana.one@gmail.com">amyana.one@gmail.com</a></p>
 <p>WhatsApp: <a href="https://wa.me/8448658684">8448658684</a></p>
 </div>
-<div>
+<div className="footer-section">
 <h3>Follow Us</h3>
 <p><a href="https://www.instagram.com/amyana.official" target="_blank">Instagram</a></p>
 <p><a href="https://www.linkedin.com/in/amibannu/" target="_blank">LinkedIn</a></p>
 </div>
-<div>
+</div>
+
+<div className="footer-instagram">
 <h3>Instagram Feed</h3>
 <InstagramEmbed/>
 </div>
-</div>
-<p>© AMYANA Wellness</p>
+
+<p className="footer-copyright">© AMYANA Wellness</p>
 </footer>
 )
 }
