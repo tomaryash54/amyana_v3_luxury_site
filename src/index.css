@@ -176,7 +176,8 @@ a:hover {
 .corporate-page,
 .hospitality-page,
 .sound-page,
-.gift-page {
+.gift-page,
+.personal-healing-page {
   min-height: 100vh;
 }
 
@@ -248,6 +249,10 @@ a:hover {
 
 .gift-page .page-hero {
   background-image: url('/images/gift.jpg');
+}
+
+.personal-healing-hero {
+  background-image: url('/images/journal.jpg');
 }
 
 @media (max-width: 768px) {

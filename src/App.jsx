@@ -11,6 +11,7 @@ const Workshops = lazy(() => import("./pages/Workshops"))
 const Corporate = lazy(() => import("./pages/Corporate"))
 const Hospitality = lazy(() => import("./pages/Hospitality"))
 const OurStory = lazy(() => import("./pages/OurStory"))
+const PersonalHealing = lazy(() => import("./pages/PersonalHealing"))
 const Feedback = lazy(() => import("./pages/Feedback"))
 
 const OFFERING_ROUTES = {
@@ -19,6 +20,7 @@ const OFFERING_ROUTES = {
   "/hospitality": "hospitality",
   "/sound": "sound",
   "/our-story": "our_story",
+  "/personal-healing": "personal_healing",
   "/reiki": "reiki",
 }
 
@@ -211,6 +213,7 @@ return(
 <Route path="/corporate" element={<Corporate/>}/>
 <Route path="/hospitality" element={<Hospitality/>}/>
 <Route path="/our-story" element={<OurStory/>}/>
+<Route path="/personal-healing" element={<PersonalHealing/>}/>
 <Route path="/feedback" element={<Feedback/>}/>
 </Routes>
 </Suspense>

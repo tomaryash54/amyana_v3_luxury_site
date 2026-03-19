@@ -71,13 +71,13 @@ return(
 </div>
 </Link>
 
-<Link to="/our-story" className="offering-card">
+<Link to="/personal-healing" className="offering-card">
 <div className="card-image-wrapper">
 <img {...getOfferingImageProps("journal")} alt="Personal Healing" loading="lazy" decoding="async"/>
 <div className="card-overlay"></div>
 </div>
 <div className="card-content">
-<h3>Our Story</h3>
+<h3>Personal Healing</h3>
 </div>
 </Link>
 
