@@ -17,7 +17,7 @@ return(
 </section>
 
 <section className="page-section">
-<h2>1️⃣ Signature Sound Experiences</h2>
+<h2>Signature Sound Experiences</h2>
 
 <div className="service-list">
 <div className="service-item">
@@ -38,7 +38,7 @@ return(
 </section>
 
 <section className="page-section">
-<h2>2️⃣ Wellness Retreat Partnerships</h2>
+<h2>Wellness Retreat Partnerships</h2>
 <h3>Curated Retreat Collaborations</h3>
 <p>One-day or multi-day immersive retreats hosted in partnership with your property - integrating sound, breath, reflection, and intentional stillness.</p>
 
