@@ -8,7 +8,7 @@ const cards = [
 {
 id: 1,
 title: "Blooming Lotus Card",
-image: "/images/gift1.jpg",
+image: "/images/gift3.jpg",
 tagline: "A gentle introduction to the world of sound and energy healing.",
 description: "Perfect for those beginning their wellness journey or anyone in need of calm and restoration.",
 redeem: [
@@ -20,7 +20,7 @@ redeem: [
 {
 id: 2,
 title: "Golden Buddha Card",
-image: "/images/gift2.jpg",
+image: "/images/gift1.jpg",
 tagline: "A deeper invitation into restorative practices and intentional healing.",
 description: "Designed for those seeking extended relaxation, emotional clarity, or a shared experience with close ones.",
 redeem: [
@@ -33,7 +33,7 @@ redeem: [
 {
 id: 3,
 title: "Sacred Moon Card",
-image: "/images/gift3.jpg",
+image: "/images/gift2.jpg",
 tagline: "The most immersive AMYANA offering.",
 description: "Created for profound rest, reflection, and transformational experiences.",
 redeem: [
