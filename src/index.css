@@ -170,67 +170,6 @@ a:hover {
 .bg-tertiary { background-color: var(--color-background-tertiary); }
 .bg-brand { background-color: var(--color-brand); }
 
-/* Home Hero */
-.hero {
-  position: relative;
-  width: 100%;
-  min-height: 72vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 96px 20px;
-  text-align: center;
-  color: #fff;
-  background-image: url('/images/workshops.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.35) 100%);
-  z-index: 1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  width: min(840px, 92vw);
-}
-
-.hero-content h1,
-.hero-content p {
-  color: #fff;
-}
-
-.hero-content h1 {
-  margin-bottom: var(--space-5);
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
-}
-
-.hero-content p {
-  margin: 0 auto;
-  max-width: 760px;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
-}
-
-@media (max-width: 1024px) {
-  .hero {
-    background-image: url('/images/workshops-960.jpg');
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    min-height: 56vh;
-    padding: 88px 16px 72px;
-    background-image: url('/images/workshops-640.jpg');
-    background-position: center;
-  }
-}
-
 /* Page Styles - Offering Pages */
 .reiki-page,
 .workshops-page,
