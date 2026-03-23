@@ -18,6 +18,11 @@ export default function Home(){
 return(
 <>
 <div className="hero">
+<picture className="hero-media" aria-hidden="true">
+<source media="(max-width: 768px)" srcSet="/images/workshops-640.jpg"/>
+<source media="(max-width: 1024px)" srcSet="/images/workshops-960.jpg"/>
+<img src="/images/workshops.jpg" alt="" loading="eager" fetchPriority="high" decoding="async"/>
+</picture>
 <div className="hero-overlay"></div>
 <RevealOnScroll className="hero-content">
 <h1>Healing is a return, not a performance</h1>
