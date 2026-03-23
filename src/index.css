@@ -227,28 +227,34 @@ a:hover {
 }
 
 /* Individual Page Backgrounds */
-.reiki-page .page-hero {
+.reiki-page .page-hero,
+.reiki-hero {
   background-image: url('/images/reiki.jpg');
 }
 
-.workshops-page .page-hero {
+.workshops-page .page-hero,
+.workshops-hero {
   background-image: url('/images/workshops.jpg');
 }
 
-.corporate-page .page-hero {
+.corporate-page .page-hero,
+.corporate-hero {
   background-image: url('/images/corporate.jpg');
 }
 
-.hospitality-page .page-hero {
+.hospitality-page .page-hero,
+.hospitality-hero {
   background-image: url('/images/hospitality.jpg');
 }
 
-.sound-page .page-hero {
+.sound-page .page-hero,
+.sound-hero {
   background-image: url('/images/private.jpg');
 }
 
-.gift-page .page-hero {
-  background-image: url('/images/gift.jpg');
+.gift-page .page-hero,
+.gift-hero {
+  background-image: url('/images/gift1.jpg');
 }
 
 .personal-healing-hero {
@@ -261,8 +267,68 @@ a:hover {
     background-attachment: scroll;
   }
 
+  .reiki-page .page-hero,
+  .reiki-hero {
+    background-image: url('/images/reiki-640.jpg');
+  }
+
+  .workshops-page .page-hero,
+  .workshops-hero {
+    background-image: url('/images/workshops-640.jpg');
+  }
+
+  .corporate-page .page-hero,
+  .corporate-hero {
+    background-image: url('/images/corporate-640.jpg');
+  }
+
+  .hospitality-page .page-hero,
+  .hospitality-hero {
+    background-image: url('/images/hospitality-640.jpg');
+  }
+
+  .sound-page .page-hero,
+  .sound-hero {
+    background-image: url('/images/private-640.jpg');
+  }
+
+  .personal-healing-hero {
+    background-image: url('/images/journal-640.jpg');
+  }
+
   .page-hero h1 {
     font-size: clamp(2rem, 5vw, 2.5rem);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .reiki-page .page-hero,
+  .reiki-hero {
+    background-image: url('/images/reiki-960.jpg');
+  }
+
+  .workshops-page .page-hero,
+  .workshops-hero {
+    background-image: url('/images/workshops-960.jpg');
+  }
+
+  .corporate-page .page-hero,
+  .corporate-hero {
+    background-image: url('/images/corporate-960.jpg');
+  }
+
+  .hospitality-page .page-hero,
+  .hospitality-hero {
+    background-image: url('/images/hospitality-960.jpg');
+  }
+
+  .sound-page .page-hero,
+  .sound-hero {
+    background-image: url('/images/private-960.jpg');
+  }
+
+  .personal-healing-hero {
+    background-image: url('/images/journal-960.jpg');
   }
 }
 
