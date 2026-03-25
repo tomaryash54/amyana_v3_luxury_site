@@ -50,13 +50,6 @@ setFlipped({...flipped, [id]: !flipped[id]})
 
 return(
 <>
-<div className="page-hero gift-hero">
-<div>
-<h1>The Gift of Stillness</h1>
-<p>Offer your loved ones a meaningful pause from the noise of everyday life</p>
-</div>
-</div>
-
 <div className="container gift-cards-page gift-page">
 <section className="gift-intro">
 <h2>The Gift of Stillness</h2>

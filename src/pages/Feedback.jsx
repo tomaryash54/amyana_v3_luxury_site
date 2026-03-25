@@ -27,7 +27,7 @@ export default function Feedback() {
 
   return (
     <div className="feedback-page">
-      <div className="page-hero feedback-hero">
+      <div className="feedback-hero">
         <div>
           <h1>Feedback</h1>
           <p>Stories of Transformation and Healing</p>
