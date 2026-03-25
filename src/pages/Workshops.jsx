@@ -43,7 +43,7 @@ Inspired by lunar cycles, this experience guides you through gentle Moon Salutat
 <h2>Retreats</h2>
 <p>Discover the Bali Serenity Retreat with Amy: a 6-day small-group journey in Bali, Indonesia designed for deep reset, calm, and conscious connection.</p>
 <p>Expect sound healing, guided yoga, water-based healing experiences, curated nature excursions, and restorative wellness rituals in a premium retreat setting.</p>
-<a href="https://skaya.club/trips/f2a484e4-0f0f-4d4c-bdc9-7de1f98b5d75" target="_blank" rel="noopener noreferrer" className="btn-primary retreat-luxe-btn">Book Your Retreat Journey</a>
+<a href="https://skaya.club/trips/f2a484e4-0f0f-4d4c-bdc9-7de1f98b5d75" target="_blank" rel="noopener noreferrer" className="btn-primary retreat-luxe-btn">Book your retreat now</a>
 </section>
 </div>
 </div>
