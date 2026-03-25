@@ -105,6 +105,9 @@ height="350"
 frameBorder="0"
 scrolling="no"
 allowTransparency="true"
+loading="lazy"
+title="AMYANA Instagram feed"
+referrerPolicy="strict-origin-when-cross-origin"
 style={{borderRadius: '12px'}}
 ></iframe>
 </div>
@@ -137,7 +140,7 @@ style={{borderRadius: '12px'}}
 function FloatingWhatsApp(){
 return(
 <a href="https://wa.me/8448658684" className="whatsapp-float" target="_blank" rel="noopener noreferrer">
-<img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp"/>
+<img src="/images/whatsapp-icon.png" alt="WhatsApp" loading="lazy" decoding="async"/>
 </a>
 )
 }
