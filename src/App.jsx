@@ -2,6 +2,7 @@
 import {BrowserRouter,Routes,Route,Link,useLocation} from "react-router-dom"
 import {useState, Suspense, lazy, useEffect} from "react"
 import { initAnalytics, trackEvent } from "./utils/analytics"
+import ErrorBoundary from "./components/ErrorBoundary"
 
 const Home = lazy(() => import("./pages/Home"))
 const Reiki = lazy(() => import("./pages/Reiki"))
@@ -164,7 +165,12 @@ const { pathname } = useLocation()
 
 useEffect(() => {
   window.scrollTo({ top: 0, left: 0, behavior: "auto" })
-  document.title = PAGE_TITLES[pathname] || "AMYANA Wellness"
+  const nextTitle = PAGE_TITLES[pathname] || "AMYANA Wellness"
+  document.title = nextTitle
+  trackEvent("page_view", {
+    page_path: pathname,
+    page_title: nextTitle,
+  })
 }, [pathname])
 
 return null
@@ -218,6 +224,7 @@ useEffect(() => {
 }, [])
 
 return(
+<ErrorBoundary>
 <BrowserRouter>
 <a href="#main-content" className="skip-link">Skip to main content</a>
 <ScrollToTop/>
@@ -241,5 +248,6 @@ return(
 <Footer/>
 <FloatingWhatsApp/>
 </BrowserRouter>
+</ErrorBoundary>
 )
 }

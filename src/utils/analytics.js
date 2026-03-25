@@ -44,3 +44,16 @@ export function trackEvent(eventName, params = {}) {
     ...params,
   })
 }
+
+export function trackWebVital(metric) {
+  if (!metric || typeof metric !== "object") return
+
+  trackEvent("web_vital", {
+    metric_name: metric.name,
+    metric_value: Number(metric.value?.toFixed?.(2) ?? metric.value ?? 0),
+    metric_delta: Number(metric.delta?.toFixed?.(2) ?? metric.delta ?? 0),
+    metric_id: metric.id,
+    metric_rating: metric.rating,
+    non_interaction: true,
+  })
+}
