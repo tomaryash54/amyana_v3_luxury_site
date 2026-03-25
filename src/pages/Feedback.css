@@ -192,3 +192,16 @@
     padding: 22px 16px;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .feedback-hero > div,
+  .feedback-item,
+  .feedback-cta {
+    animation: none;
+  }
+
+  .feedback-item,
+  .feedback-img {
+    transition: none;
+  }
+}

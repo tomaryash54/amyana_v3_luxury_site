@@ -11,7 +11,10 @@ export default function Feedback() {
       page_path: window.location.pathname,
       cta_text: 'feedback_share_button',
     })
-    window.open(feedbackWhatsAppUrl, '_blank')
+    const feedbackWindow = window.open(feedbackWhatsAppUrl, '_blank', 'noopener,noreferrer')
+    if (feedbackWindow) {
+      feedbackWindow.opener = null
+    }
   }
 
   const testimonials = [

@@ -1,26 +1,26 @@
 import { motion, useReducedMotion } from "framer-motion"
 
 const containerVariants = {
-  hidden: { opacity: 0, y: 12 },
+  hidden: { opacity: 0, y: 10 },
   visible: (custom = {}) => ({
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.8,
+      duration: 0.65,
       ease: "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
       when: "beforeChildren",
-      staggerChildren: custom.stagger ? 0.12 : 0,
+      staggerChildren: custom.stagger ? 0.08 : 0,
     },
   }),
 }
 
 export const fadeUpVariants = {
-  hidden: { opacity: 0, y: 12 },
+  hidden: { opacity: 0, y: 10 },
   visible: {
     opacity: 1,
     y: 0,
     transition: { 
-      duration: 0.8, 
+      duration: 0.65, 
       ease: "cubic-bezier(0.25, 0.46, 0.45, 0.94)" 
     },
   },
@@ -41,9 +41,10 @@ export default function RevealOnScroll({
       className={className}
       initial={prefersReducedMotion ? false : "hidden"}
       whileInView={prefersReducedMotion ? undefined : "visible"}
-      viewport={{ once: true, amount: 0.1 }}
+      viewport={{ once: true, amount: 0.25 }}
       variants={variants}
       custom={{ stagger }}
+      style={{ willChange: prefersReducedMotion ? "auto" : "opacity, transform" }}
       {...props}
     >
       {children}

@@ -24,6 +24,19 @@ const OFFERING_ROUTES = {
   "/reiki": "reiki",
 }
 
+const PAGE_TITLES = {
+  "/": "AMYANA Wellness",
+  "/sound": "Sound Baths | AMYANA Wellness",
+  "/reiki": "Reiki | AMYANA Wellness",
+  "/gift": "Gift Cards | AMYANA Wellness",
+  "/workshops": "Workshops & Retreats | AMYANA Wellness",
+  "/corporate": "Corporate Wellness | AMYANA Wellness",
+  "/hospitality": "Hospitality Wellness | AMYANA Wellness",
+  "/our-story": "Our Story | AMYANA Wellness",
+  "/personal-healing": "Personal Healing | AMYANA Wellness",
+  "/feedback": "Feedback | AMYANA Wellness",
+}
+
 function Nav(){
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 const [dropdownOpen, setDropdownOpen] = useState(false)
@@ -107,7 +120,8 @@ scrolling="no"
 allowTransparency="true"
 loading="lazy"
 title="AMYANA Instagram feed"
-referrerPolicy="strict-origin-when-cross-origin"
+referrerPolicy="no-referrer"
+sandbox="allow-scripts allow-same-origin allow-popups"
 style={{borderRadius: '12px'}}
 ></iframe>
 </div>
@@ -150,6 +164,7 @@ const { pathname } = useLocation()
 
 useEffect(() => {
   window.scrollTo({ top: 0, left: 0, behavior: "auto" })
+  document.title = PAGE_TITLES[pathname] || "AMYANA Wellness"
 }, [pathname])
 
 return null
@@ -204,8 +219,10 @@ useEffect(() => {
 
 return(
 <BrowserRouter>
+<a href="#main-content" className="skip-link">Skip to main content</a>
 <ScrollToTop/>
 <Nav/>
+<main id="main-content">
 <Suspense fallback={<div className="container" style={{padding: '40px 20px'}}>Loading...</div>}>
 <Routes>
 <Route path="/" element={<Home/>}/>
@@ -220,6 +237,7 @@ return(
 <Route path="/feedback" element={<Feedback/>}/>
 </Routes>
 </Suspense>
+</main>
 <Footer/>
 <FloatingWhatsApp/>
 </BrowserRouter>

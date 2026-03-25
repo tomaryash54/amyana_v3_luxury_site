@@ -1,4 +1,5 @@
-const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID
+const GA_MEASUREMENT_ID = (import.meta.env.VITE_GA_MEASUREMENT_ID || "").trim()
+const GA_MEASUREMENT_ID_PATTERN = /^G-[A-Z0-9]+$/
 
 function ensureDataLayer() {
   if (typeof window === "undefined") return
@@ -10,7 +11,7 @@ export function initAnalytics() {
 
   ensureDataLayer()
 
-  if (!GA_MEASUREMENT_ID || typeof window.gtag === "function") {
+  if (!GA_MEASUREMENT_ID_PATTERN.test(GA_MEASUREMENT_ID) || typeof window.gtag === "function") {
     return
   }
 
