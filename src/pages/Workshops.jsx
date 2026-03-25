@@ -39,10 +39,10 @@ Inspired by lunar cycles, this experience guides you through gentle Moon Salutat
 <a href="https://wa.me/8448658684" target="_blank" rel="noopener noreferrer" className="btn-primary">Reserve Your Space</a>
 </section>
 
-<section className="page-section coming-soon">
-<h2>🌿 Retreats</h2>
-<p className="coming-soon-text">Coming Soon</p>
-<p>Immersive multi-day experiences designed for deep restoration and renewal.</p>
+<section className="page-section coming-soon retreats-luxe">
+<h2>Retreats</h2>
+<p>Immersive multi-day experiences crafted for deep restoration, meaningful connection, and luxurious stillness in nature-led spaces.</p>
+<a href="https://skaya.club/trips/f2a484e4-0f0f-4d4c-bdc9-7de1f98b5d75" target="_blank" rel="noopener noreferrer" className="btn-primary retreat-luxe-btn">Book Your Retreat Journey</a>
 </section>
 </div>
 </div>
