@@ -32,6 +32,24 @@ body{
 }
 h1,h2,h3{font-family:'Dancing Script',cursive;}
 a{text-decoration:none;color:inherit;}
+.skip-link{
+ position:absolute;
+ left:-9999px;
+ top:12px;
+ background:#ffffff;
+ color:#2c2c2c;
+ padding:10px 14px;
+ border-radius:10px;
+ border:1px solid rgba(110,92,75,0.35);
+ z-index:2000;
+}
+.skip-link:focus{
+ left:12px;
+}
+:focus-visible{
+ outline:2px solid #6e5c4b;
+ outline-offset:2px;
+}
 .container{max-width:1200px;margin:auto;padding:40px 20px;}
 .grid{display:grid;gap:30px;}
 .grid-3{grid-template-columns:repeat(3,1fr);}
@@ -698,7 +716,7 @@ h4{color:#6e5c4b;margin-top:20px;font-weight:500;font-size:16px;letter-spacing:0
 }
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none !important;transition:none !important;scroll-behavior:auto !important;}}
 </style>
-  <script type="module" crossorigin src="/assets/index-BP4hbcdv.js"></script>
+  <script type="module" crossorigin src="/assets/index-Cg2PGNrA.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/jsx-runtime-DTJ6URaS.js">
 </head>
 <body>
