@@ -20,6 +20,7 @@
 <meta name="twitter:title" content="AMYANA Wellness">
 <meta name="twitter:description" content="Healing is a return, not a performance. Sound healing, reiki, workshops, and restorative wellness journeys.">
 <meta name="twitter:image" content="https://amyana.in/images/footer1.jpg">
+<link rel="preload" as="image" href="/images/reiki-bg.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -618,7 +619,7 @@ h4{color:#6e5c4b;margin-top:20px;font-weight:500;font-size:16px;letter-spacing:0
 .step:not(:last-child) .step-connector{display:block;}
 @media(max-width:1024px){.steps-container{grid-template-columns:repeat(2,1fr);gap:30px;}.step-connector{display:none !important;}.grid-3{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:768px){.steps-container{grid-template-columns:1fr;gap:20px;}.how-it-works h2{font-size:28px;margin-bottom:40px;}.step{padding:20px 15px;}.step-number{width:50px;height:50px;font-size:20px;}.grid-3{grid-template-columns:1fr;}}.who-section .btn-primary{display:inline-block;margin-top:20px;}
-.gift-cards-page{padding:40px 20px;position:relative;border-radius:20px;overflow:hidden;background-image:url('/images/gift-bg.jpeg');background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed;}
+.gift-cards-page{padding:40px 20px;position:relative;border-radius:20px;overflow:hidden;background-image:url('/images/gift-bg.jpeg');background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:scroll;}
 .gift-intro{text-align:center;margin-bottom:60px;}
 .gift-intro h1{font-size:42px;margin-bottom:20px;}
 .gift-intro p{color:#666;line-height:1.8;font-size:16px;margin:15px auto;max-width:700px;}
@@ -649,7 +650,7 @@ h4{color:#6e5c4b;margin-top:20px;font-weight:500;font-size:16px;letter-spacing:0
 /* Premium visual-only overrides for service pages */
 @keyframes premiumFadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
 @keyframes premiumShimmer{from{transform:translateX(-130%);}to{transform:translateX(130%);}}
-.page-hero{position:relative;min-height:46vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 20px;margin-bottom:10px;overflow:hidden;color:#fff;background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed;}
+.page-hero{position:relative;min-height:46vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 20px;margin-bottom:10px;overflow:hidden;color:#fff;background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:scroll;}
 .page-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(145deg,rgba(10,10,10,0.52) 0%,rgba(10,10,10,0.28) 42%,rgba(110,92,75,0.38) 100%);z-index:1;}
 .page-hero > div{position:relative;z-index:2;max-width:780px;padding:12px 18px;animation:premiumFadeUp .9s cubic-bezier(0.16,1,0.3,1) both;}
 .page-hero h1{margin:0 0 14px 0;font-size:clamp(2.4rem,5.6vw,4.3rem);font-family:'Dancing Script',cursive;font-weight:500;letter-spacing:.7px;color:#fff;text-shadow:0 4px 24px rgba(0,0,0,0.32);}
@@ -659,7 +660,7 @@ h4{color:#6e5c4b;margin-top:20px;font-weight:500;font-size:16px;letter-spacing:0
 .workshops-hero{background-image:url('/images/workshops.jpg?v=20260318m');}
 .corporate-hero{background-image:url('/images/corporate.jpg?v=20260318m');}
 .hospitality-hero{background-image:url('/images/hospitality.jpg?v=20260318m');}
-.gift-hero{background-image:url('/images/gift.jpg');}
+.gift-hero{background-image:url('/images/gift1.jpg');}
 
 .page-section{position:relative;margin:56px 0;padding:44px 34px;border-radius:20px;border:1px solid rgba(110,92,75,0.18);background:linear-gradient(145deg,rgba(255,255,255,.96) 0%,rgba(245,241,236,.8) 100%);box-shadow:0 18px 44px rgba(54,44,34,.08);transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;animation:premiumFadeUp .72s cubic-bezier(0.16,1,0.3,1) both;}
 .page-section:hover{transform:translateY(-5px);box-shadow:0 24px 52px rgba(54,44,34,.12);border-color:rgba(110,92,75,0.28);}
