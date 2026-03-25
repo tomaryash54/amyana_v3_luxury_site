@@ -12,7 +12,7 @@
 .feedback-page {
   width: 100%;
   background-image:
-    url('/images/feedback-bg.jpeg');
+    url('/images/feedback-bg.jpeg?v=20260326');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -154,8 +154,9 @@
   }
 
   .feedback-page {
+    background-image: url('/images/feedback-bg.jpeg?v=20260326m');
     background-attachment: scroll;
-    background-position: center 24%;
+    background-position: center 18%;
   }
 
   .feedback-main {
