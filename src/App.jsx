@@ -38,6 +38,96 @@ const PAGE_TITLES = {
   "/feedback": "Feedback | AMYANA Wellness",
 }
 
+const SITE_URL = "https://amyana.in"
+const DEFAULT_OG_IMAGE = `${SITE_URL}/images/footer1.jpg`
+
+const PAGE_META = {
+  "/": {
+    description: "AMYANA is a refined healing space in Delhi NCR for sound baths, reiki, workshops, corporate wellness, and hospitality wellness experiences.",
+    image: `${SITE_URL}/images/footer1.jpg`,
+  },
+  "/sound": {
+    description: "Private and group sound bath experiences for deep restoration, emotional balance, and nervous system regulation.",
+    image: `${SITE_URL}/images/private.jpg`,
+  },
+  "/reiki": {
+    description: "Reiki sessions designed for emotional balance, energetic alignment, and gentle nervous system support.",
+    image: `${SITE_URL}/images/reiki.jpg`,
+  },
+  "/gift": {
+    description: "Gift meaningful wellness experiences with AMYANA gift cards for private sessions, workshops, and retreats.",
+    image: `${SITE_URL}/images/gift1.jpg`,
+  },
+  "/workshops": {
+    description: "Immersive workshops and retreats designed to reconnect you with stillness, reflection, and renewal.",
+    image: `${SITE_URL}/images/workshops.jpg`,
+  },
+  "/corporate": {
+    description: "Nervous system-led corporate wellness sessions for stress reduction, clarity, and emotional resilience.",
+    image: `${SITE_URL}/images/corporate.jpg`,
+  },
+  "/hospitality": {
+    description: "Curated hospitality wellness experiences for boutique hotels, retreats, and luxury guest journeys.",
+    image: `${SITE_URL}/images/hospitality.jpg`,
+  },
+  "/our-story": {
+    description: "Discover the philosophy and healing foundation behind AMYANA and its approach to restoration.",
+    image: `${SITE_URL}/images/footer1.jpg`,
+  },
+  "/personal-healing": {
+    description: "A personal healing journey designed to restore balance through intentional, one-on-one care.",
+    image: `${SITE_URL}/images/personal-healing.jpg`,
+  },
+  "/feedback": {
+    description: "Read stories of transformation and healing shared by the AMYANA community.",
+    image: `${SITE_URL}/images/feedback-bg.jpeg`,
+  },
+}
+
+function setMetaTag({ name, property, content }) {
+  if (!content) return
+
+  const selector = name ? `meta[name="${name}"]` : `meta[property="${property}"]`
+  const attr = name ? "name" : "property"
+  const value = name || property
+
+  let tag = document.querySelector(selector)
+  if (!tag) {
+    tag = document.createElement("meta")
+    tag.setAttribute(attr, value)
+    document.head.appendChild(tag)
+  }
+
+  tag.setAttribute("content", content)
+}
+
+function updateRouteMeta(pathname, title) {
+  const safePath = pathname === "/" ? "/" : pathname.replace(/\/+$/, "")
+  const canonicalUrl = `${SITE_URL}${safePath === "/" ? "/" : safePath}`
+  const routeMeta = PAGE_META[safePath] || PAGE_META["/"]
+  const description = routeMeta?.description || PAGE_META["/"].description
+  const image = routeMeta?.image || DEFAULT_OG_IMAGE
+
+  const canonical = document.querySelector("link[rel='canonical']")
+  if (canonical) canonical.setAttribute("href", canonicalUrl)
+
+  setMetaTag({ name: "description", content: description })
+  setMetaTag({ name: "twitter:title", content: title })
+  setMetaTag({ name: "twitter:description", content: description })
+  setMetaTag({ name: "twitter:image", content: image })
+
+  setMetaTag({ property: "og:title", content: title })
+  setMetaTag({ property: "og:description", content: description })
+  setMetaTag({ property: "og:url", content: canonicalUrl })
+  setMetaTag({ property: "og:image", content: image })
+
+  const isPreviewHost = /\.vercel\.app$/i.test(window.location.hostname)
+  setMetaTag({
+    name: "robots",
+    content: isPreviewHost ? "noindex,nofollow" : "index,follow,max-image-preview:large",
+  })
+}
+
 function Nav(){
 const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 const [dropdownOpen, setDropdownOpen] = useState(false)
@@ -167,6 +257,7 @@ useEffect(() => {
   window.scrollTo({ top: 0, left: 0, behavior: "auto" })
   const nextTitle = PAGE_TITLES[pathname] || "AMYANA Wellness"
   document.title = nextTitle
+  updateRouteMeta(pathname, nextTitle)
   trackEvent("page_view", {
     page_path: pathname,
     page_title: nextTitle,

@@ -26,7 +26,7 @@ export function initAnalytics() {
 
   window.gtag = gtag
   gtag("js", new Date())
-  gtag("config", GA_MEASUREMENT_ID, { send_page_view: true })
+  gtag("config", GA_MEASUREMENT_ID, { send_page_view: false })
 }
 
 export function trackEvent(eventName, params = {}) {
