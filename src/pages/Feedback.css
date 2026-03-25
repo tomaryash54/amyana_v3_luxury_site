@@ -13,8 +13,7 @@
   width: 100%;
   background-image:
     linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(250, 247, 242, 0.9) 100%),
-    url('/images/feedback-bg.jpeg'),
-    url('/images/feedback-bg-placeholder.svg');
+    url('/images/feedback-bg.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
